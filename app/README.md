@@ -1,4 +1,4 @@
-# balkan-ultra
+# app
 
 ## Project setup
 ```
