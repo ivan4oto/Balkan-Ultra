@@ -8,7 +8,7 @@
           </router-link>
         </b-col>
         <b-col>
-          <router-link to="/about">
+          <router-link to="/Register">
             <b-navbar-brand>Register</b-navbar-brand>
           </router-link>
         </b-col>

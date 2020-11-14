@@ -1,6 +1,8 @@
 <template>
   <div>
-    <Navbar />
+    <div id="mynavbar" class="mb-5">
+      <Navbar />
+    </div>
     <router-view />
   </div>
 </template>
@@ -15,4 +17,8 @@ export default {
 };
 </script>
 
-<style></style>
+<style>
+#mynavbar{
+  box-shadow: 0 4px 6px 1px rgb(107, 107, 107);
+}
+</style>
