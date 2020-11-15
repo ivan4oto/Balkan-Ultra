@@ -1,6 +1,6 @@
 <template>
-  <div>
-    <b-container>
+  <div class="">
+    <b-container class="p-3">
       <b-form @submit="onSubmit" @reset="onReset" v-if="show">
         <b-form-group
           id="input-group-1"
@@ -75,14 +75,26 @@
               label="Qualifying Race:"
               description="Моля поставете линк към резултати на състезания доказващи, че нема бедствате по чукарите."
             >
-              <b-form-input type="url"></b-form-input>
+              <b-form-input type="url" v-model="raceLink"></b-form-input>
             </b-form-group>
           </b-col>
-          <b-col cols='2'>
-            <b-button size='sm' variant="outline-primary" class="mb-1">Add Link</b-button>
-            <b-button size='sm' variant="outline-danger">Remove Link</b-button>
+          <b-col cols="2">
+            <b-button
+              @click="addLink"
+              size="sm"
+              variant="outline-primary"
+              class="mb-1"
+              >Add Link</b-button
+            >
+            <b-button size="sm" variant="outline-danger" @click="removeLink"
+              >Remove Link</b-button
+            >
           </b-col>
         </b-row>
+
+        <b-list-group v-for="link in form.raceLinks" v-bind:key="link">
+          <b-list-group-item>{{ link }}</b-list-group-item>
+        </b-list-group>
 
         <!-- 
         <b-form-group id="input-group-4">
@@ -93,13 +105,15 @@
         </b-form-group> -->
 
         <b-row class="justify-content-md-center pt-5">
-          <b-button type="submit" variant="primary" class="mr-1">Submit</b-button>
+          <b-button type="submit" variant="primary" class="mr-1"
+            >Submit</b-button
+          >
           <b-button type="reset" variant="danger">Reset</b-button>
         </b-row>
       </b-form>
-      <!-- <b-card class="mt-3" header="Form Data Result">
+      <b-card class="mt-3" header="Form Data Result">
         <pre class="m-0">{{ form }}</pre>
-      </b-card> -->
+      </b-card>
     </b-container>
   </div>
 </template>
@@ -109,6 +123,7 @@ export default {
   name: "RegisterForm",
   data() {
     return {
+      raceLink: "",
       form: {
         email: "",
         firstname: "",
@@ -116,6 +131,7 @@ export default {
         lastname: "",
         gender: null,
         extraBeds: 0,
+        raceLinks: [],
         checked: [],
       },
       genders: [{ text: "Select One", value: null }, "Male", "Female"],
@@ -123,6 +139,17 @@ export default {
     };
   },
   methods: {
+    addLink() {
+      if (this.form.raceLinks.length > 2) {
+        alert("Стига толкос брат");
+      } else {
+        this.form.raceLinks.push(this.raceLink);
+        this.raceLink = "";
+      }
+    },
+    removeLink() {
+      this.form.raceLinks.pop();
+    },
     onSubmit(evt) {
       evt.preventDefault();
       alert(JSON.stringify(this.form));
