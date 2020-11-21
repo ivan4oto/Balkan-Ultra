@@ -11,25 +11,35 @@ class Athlete(db.Model):
     gender = db.Column(db.String(100))
     age = db.Column(db.Integer)
     bonus_beds = db.Column(db.Integer)
-    race_link_id = db.Column(db.Integer, db.ForeignKey('racelinks.id'))
+    race_link = db.relationship(
+        "RaceLink", backref="athletes", lazy="dynamic")
 
 
 class RaceLink(db.Model):
     __tablename__ = 'racelinks'
     id = db.Column(db.Integer, primary_key=True)
     athlete_id = db.Column(db.Integer, db.ForeignKey(
-        'athletes.id'), nullable=False)
+        'athletes.id'))
     link = db.Column(db.String(200))
 
 
 # Athlete Schema
-
-
 class AthleteSchema(ma.Schema):
     class Meta:
         fields = ('id', 'first_name', 'second_name', 'last_name',
-                  'email', 'gender', 'age', 'bonus_beds', 'race_link')
+                  'email', 'gender', 'age', 'bonus_beds')
 
 
 athlete_schema = AthleteSchema()
 athletes_schema = AthleteSchema(many=True)
+
+# Links Schema
+
+
+class LinkSchema(ma.Schema):
+    class Meta:
+        fields = ('id', 'athlete_id', 'link')
+
+
+link_schema = LinkSchema()
+links_schema = LinkSchema(many=True)
