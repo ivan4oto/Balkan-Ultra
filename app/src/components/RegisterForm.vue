@@ -105,7 +105,11 @@
         </b-form-group> -->
 
         <b-row class="justify-content-md-center pt-5">
-          <b-button type="submit" variant="primary" class="mr-1"
+          <b-button
+            type="submit"
+            variant="primary"
+            class="mr-1"
+            @click="submitForm()"
             >Submit</b-button
           >
           <b-button type="reset" variant="danger">Reset</b-button>
@@ -119,6 +123,8 @@
 </template>
 
 <script>
+const axios = require("axios").default;
+
 export default {
   name: "RegisterForm",
   data() {
@@ -130,9 +136,9 @@ export default {
         secondname: "",
         lastname: "",
         gender: null,
+        age: 20,
         extraBeds: 0,
-        raceLinks: [],
-        checked: [],
+        raceLinks: []
       },
       genders: [{ text: "Select One", value: null }, "Male", "Female"],
       show: true,
@@ -158,14 +164,33 @@ export default {
       evt.preventDefault();
       // Reset our form values
       this.form.email = "";
-      this.form.name = "";
-      this.form.food = null;
-      this.form.checked = [];
+      this.form.firstname = "";
+      this.form.secondname = "";
+      this.form.lastname = "";
       // Trick to reset/clear native browser form validation state
       this.show = false;
       this.$nextTick(() => {
         this.show = true;
       });
+    },
+    submitForm() {
+      axios
+        .post("http://127.0.0.1:5000/athlete", {
+          first_name: this.form.firstname,
+          second_name: this.form.secondname,
+          last_name: this.form.lastname,
+          email: this.form.email,
+          gender: this.form.gender,
+          age: this.form.age,
+          bonus_beds: this.form.extraBeds,
+          link: this.form.raceLinks,
+        })
+        .then(function(response) {
+          console.log(response);
+        })
+        .catch(function(error) {
+          console.log(error);
+        });
     },
   },
 };

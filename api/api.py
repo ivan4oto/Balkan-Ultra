@@ -22,7 +22,6 @@ def get_links():
 # Create a Product
 @api.route('/athlete', methods=['POST'])
 def add_athlete():
-    print(request.json['link'], " < --------")
     first_name = request.json['first_name']
     second_name = request.json['second_name']
     last_name = request.json['last_name']
@@ -32,16 +31,16 @@ def add_athlete():
     bonus_beds = request.json['bonus_beds']
     link = request.json['link']
 
+    links = [RaceLink(link=l) for l in link]
     new_athlete = Athlete(first_name=first_name, second_name=second_name, last_name=last_name,
                           email=email, gender=gender, age=age, bonus_beds=bonus_beds)
-    new_race_link = RaceLink(link=link)
-    new_athlete.race_link.append(new_race_link)
+    new_athlete.race_link.extend(links)
 
     db.session.add(new_athlete)
-    db.session.add(new_race_link)
+    db.session.add_all(links)
     db.session.commit()
 
-    return athlete_schema.jsonify(new_athlete)
+    return "success"
 
 
 if __name__ == "__main__":
