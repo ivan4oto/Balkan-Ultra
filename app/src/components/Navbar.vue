@@ -18,15 +18,11 @@
           <!-- Right aligned nav items -->
           <b-navbar-nav class="ml-auto">
             <b-dropdown variant="dark" size="lg" text="Results">
-              <b-link to="Results">
-                <b-dropdown-item>
-                  <router-link to="Results">
-                    <b-dropdown-option>
-                      2020
-                    </b-dropdown-option>
-                  </router-link>
-                </b-dropdown-item>
-              </b-link>
+              <router-link to="Results">
+                <a role="menuitem" target="_self" class="dropdown-item">
+                  2020
+                </a>
+              </router-link>
               <b-dropdown-item disabled>2021</b-dropdown-item>
             </b-dropdown>
             <router-link to="/about">
