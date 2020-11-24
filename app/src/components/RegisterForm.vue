@@ -1,7 +1,12 @@
 <template>
-  <div class="">
+  <div>
     <b-container class="p-3">
-      <b-form @submit="onSubmit" @reset="onReset" v-if="show">
+      <b-form
+        @submit="onSubmit"
+        @reset="onReset"
+        v-if="show"
+        class="p-4 reg-form"
+      >
         <b-form-group
           id="input-group-1"
           label="Email address:"
@@ -115,9 +120,9 @@
           <b-button type="reset" variant="danger">Reset</b-button>
         </b-row>
       </b-form>
-      <b-card class="mt-3" header="Form Data Result">
+      <!-- <b-card class="mt-3" header="Form Data Result">
         <pre class="m-0">{{ form }}</pre>
-      </b-card>
+      </b-card> -->
     </b-container>
   </div>
 </template>
@@ -138,7 +143,7 @@ export default {
         gender: null,
         age: 20,
         extraBeds: 0,
-        raceLinks: []
+        raceLinks: [],
       },
       genders: [{ text: "Select One", value: null }, "Male", "Female"],
       show: true,
@@ -195,3 +200,9 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+.reg-form {
+  border: 10px solid lightseagreen;
+}
+</style>
