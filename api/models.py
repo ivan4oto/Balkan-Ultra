@@ -34,8 +34,6 @@ athlete_schema = AthleteSchema()
 athletes_schema = AthleteSchema(many=True)
 
 # Links Schema
-
-
 class LinkSchema(ma.Schema):
     class Meta:
         fields = ('id', 'athlete_id', 'link')
