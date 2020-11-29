@@ -172,6 +172,7 @@ export default {
       this.form.firstname = "";
       this.form.secondname = "";
       this.form.lastname = "";
+      this.raceLinks = [];
       // Trick to reset/clear native browser form validation state
       this.show = false;
       this.$nextTick(() => {
