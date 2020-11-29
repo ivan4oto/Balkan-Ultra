@@ -1,6 +1,7 @@
 from flask import request, jsonify
 from models import Athlete, RaceLink, athlete_schema, athletes_schema, link_schema, links_schema
 from db import api, db
+from send_mail import send_mail
 
 
 # Get all Athletes
@@ -8,6 +9,8 @@ from db import api, db
 def get_athletes():
     all_athletes = Athlete.query.all()
     result = athletes_schema.dump(all_athletes)
+    if len(result) <= 0:
+        return jsonify('No data found!')
     return jsonify(result)
 
 
@@ -16,6 +19,8 @@ def get_athletes():
 def get_links():
     all_links = RaceLink.query.all()
     result = links_schema.dump(all_links)
+    if len(result) <= 0:
+        return jsonify('No data found!')
     return jsonify(result)
 
 
@@ -40,6 +45,8 @@ def add_athlete():
     db.session.add_all(links)
     db.session.commit()
 
+    send_mail(athlete=f'{first_name} {second_name}',
+              email=email, racelinks='abv.bg')
     return "success"
 
 
