@@ -1,22 +1,24 @@
 <template>
-  <div>
+  <div class='m-3'>
     <b-container>
       <h3>Boys:</h3>
-      <b-table
-        striped
-        hover
-        :items="boys"
-        :fields="fields"
-        :tbody-tr-class="rowClass"
-      ></b-table>
-      <h3>Girls:</h3>
-      <b-table
-        striped
-        hover
-        :items="girls"
-        :fields="fields"
-        :tbody-tr-class="rowClass"
-      ></b-table>
+      <div class="results-frame">
+        <b-table
+          striped
+          hover
+          :items="boys"
+          :fields="fields"
+          :tbody-tr-class="rowClass"
+        ></b-table>
+        <h3>Girls:</h3>
+        <b-table
+          striped
+          hover
+          :items="girls"
+          :fields="fields"
+          :tbody-tr-class="rowClass"
+        ></b-table>
+      </div>
     </b-container>
   </div>
 </template>
@@ -65,3 +67,9 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+.results-frame {
+  border: 10px solid lightseagreen;
+}
+</style>
