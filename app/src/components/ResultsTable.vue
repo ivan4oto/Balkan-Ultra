@@ -1,20 +1,22 @@
 <template>
-  <div class='m-3'>
+  <div class="m-3">
     <b-container>
       <h3>Boys:</h3>
-      <div class="results-frame">
+      <div class="results-frame-m">
         <b-table
           striped
           hover
-          :items="boys"
+          :items="mResults"
           :fields="fields"
           :tbody-tr-class="rowClass"
         ></b-table>
-        <h3>Girls:</h3>
+      </div>
+      <h3 class="mt-2">Girls:</h3>
+      <div class="results-frame-f">
         <b-table
           striped
           hover
-          :items="girls"
+          :items="fResults"
           :fields="fields"
           :tbody-tr-class="rowClass"
         ></b-table>
@@ -48,7 +50,8 @@ export default {
           variant: "",
         },
       ],
-      boys: [],
+      mResults: [],
+      fResults: [],
     };
   },
   methods: {
@@ -60,16 +63,20 @@ export default {
   },
   mounted: function() {
     console.log("mounted");
-    var results2020 = require("../assets/results2020.json");
-    console.log(results2020);
-    this.boys = results2020;
-    console.log(this.boys);
+    var fResults = require("../assets/fresults.json");
+    var mResults = require("../assets/mresults.json");
+    this.fResults = fResults;
+    this.mResults = mResults;
   },
 };
 </script>
 
 <style scoped>
-.results-frame {
+.results-frame-m {
   border: 10px solid lightseagreen;
+}
+
+.results-frame-f {
+  border: 10px solid palevioletred;
 }
 </style>
