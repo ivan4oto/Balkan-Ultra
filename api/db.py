@@ -1,3 +1,4 @@
+import os
 from flask import Flask
 from flask_cors import CORS
 from flask_sqlalchemy import SQLAlchemy
@@ -6,6 +7,15 @@ from flask_marshmallow import Marshmallow
 # Init api
 api = Flask(__name__)
 CORS(api)
+
+# set configs
+api.config.update(
+    MAIL_SERVER='smtp.gmail.com',
+    MAIL_PORT=465,
+    MAIL_USE_SSL=True,
+    MAIL_USERNAME='balkanultra.noreply@gmail.com',
+    MAIL_PASSWORD=os.environ["MAIL_PASSWORD"]
+)
 
 # ENV
 ENV = 'dev'
