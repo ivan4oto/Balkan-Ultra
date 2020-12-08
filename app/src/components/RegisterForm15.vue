@@ -1,137 +1,10 @@
 <template>
   <div>
-    <b-container class="p-3">
       <div>
-        <h2 class="d-flex justify-content-center" v-if="activateUltra">
-          Register for the 80k Ultra!
-        </h2>
-        <h2 class="d-flex justify-content-center" v-if="!activateUltra">
+        <h2 class="d-flex justify-content-center text-info m-3">
           Register for the 15k Skyrace!
         </h2>
-        <b-button-group>
-          <b-button variant="danger" @click="activateUltra = true"
-            >80k ULTRA</b-button
-          >
-          <b-button variant="info" @click="activateUltra = false"
-            >15k SKY</b-button
-          >
-        </b-button-group>
       </div>
-      <div v-if="activateUltra">
-        <b-form
-          @submit="onSubmit"
-          @reset="onReset"
-          v-if="show"
-          class="p-4 reg-form"
-        >
-          <b-form-group
-            id="input-group-1"
-            label="Email address:"
-            label-for="input-1"
-          >
-            <b-form-input
-              id="input-1"
-              v-model="form.email"
-              type="email"
-              required
-              placeholder="Enter email"
-            ></b-form-input>
-          </b-form-group>
-
-          <b-form-group id="input-group-2" label="Names:" label-for="input-2">
-            <b-form-input
-              class="mb-2"
-              id="input-2"
-              v-model="form.firstname"
-              required
-              placeholder="First name"
-            ></b-form-input>
-
-            <b-form-input
-              id="input-2"
-              class="mb-2"
-              v-model="form.secondname"
-              required
-              placeholder="Second name"
-            ></b-form-input>
-
-            <b-form-input
-              id="input-2"
-              class="mb-2"
-              v-model="form.lastname"
-              required
-              placeholder="Last name"
-            ></b-form-input>
-          </b-form-group>
-
-          <b-form-row align-h="start">
-            <b-col cols="4">
-              <b-form-group
-                id="input-group-3"
-                label="Gender:"
-                label-for="input-3"
-              >
-                <b-form-select
-                  id="input-3"
-                  v-model="form.gender"
-                  :options="genders"
-                  required
-                ></b-form-select>
-              </b-form-group>
-            </b-col>
-
-            <b-col cols="4">
-              <b-form-group
-                label="Additional beds:"
-                description="Допълнителни легла за спане в хижа Плевен"
-              >
-                <b-form-input type="number" placeholder="Extra beds">
-                </b-form-input>
-              </b-form-group>
-            </b-col>
-          </b-form-row>
-
-          <b-row align-h="start">
-            <b-col cols="8">
-              <b-form-group
-                label="Qualifying Race:"
-                description="Моля поставете линк към резултати на състезания доказващи, че нема бедствате по чукарите."
-              >
-                <b-form-input type="url" v-model="raceLink"></b-form-input>
-              </b-form-group>
-            </b-col>
-            <b-col cols="2">
-              <b-button
-                @click="addLink"
-                size="sm"
-                variant="outline-primary"
-                class="mb-1"
-                >Add Link</b-button
-              >
-              <b-button size="sm" variant="outline-danger" @click="removeLink"
-                >Remove Link</b-button
-              >
-            </b-col>
-          </b-row>
-
-          <b-list-group v-for="link in form.raceLinks" v-bind:key="link">
-            <b-list-group-item>{{ link }}</b-list-group-item>
-          </b-list-group>
-
-          <b-row class="justify-content-md-center pt-5">
-            <b-button
-              type="submit"
-              variant="primary"
-              class="mr-1"
-              @click="submitForm()"
-              >Submit</b-button
-            >
-            <b-button type="reset" variant="danger">Reset</b-button>
-          </b-row>
-        </b-form>
-      </div>
-
-      <div v-if="!activateUltra">
         <b-form
           @submit="onSubmit"
           @reset="onReset"
@@ -220,12 +93,10 @@
             <b-button type="reset" variant="danger">Reset</b-button>
           </b-row>
         </b-form>
-      </div>
 
       <!-- <b-card class="mt-3" header="Form Data Result">
         <pre class="m-0">{{ form }}</pre>
       </b-card> -->
-    </b-container>
   </div>
 </template>
 
