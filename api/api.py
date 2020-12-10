@@ -8,7 +8,7 @@ from flask_mail import Mail, Message
 mail = Mail(api)
 
 
-# Get all Athletes
+# get all athletes
 @api.route('/athlete', methods=['GET'])
 def get_athletes():
     all_athletes = Athlete.query.all()
@@ -18,7 +18,7 @@ def get_athletes():
     return jsonify(result)
 
 
-# Get all Links
+# get all links
 @api.route('/links', methods=['GET'])
 def get_links():
     all_links = RaceLink.query.all()
@@ -28,9 +28,10 @@ def get_links():
     return jsonify(result)
 
 
-# Create a Product
+# create athlete
 @api.route('/athlete', methods=['POST'])
 def add_athlete():
+    distance = request.json['distance']
     first_name = request.json['first_name']
     second_name = request.json['second_name']
     last_name = request.json['last_name']
@@ -40,29 +41,36 @@ def add_athlete():
     bonus_beds = request.json['bonus_beds']
     link = request.json['link']
 
-    links = [RaceLink(link=l) for l in link]
-    # links = [RaceLink(link=link)]
     new_athlete = Athlete(first_name=first_name, second_name=second_name, last_name=last_name,
                           email=email, gender=gender, age=age, bonus_beds=bonus_beds)
-    new_athlete.race_link.extend(links)
-    # adding to db
-    try:
-        db.session.add(new_athlete)
-        db.session.add_all(links)
-        db.session.commit()
-    except Exception as e:
-        return f"Couldn't add objects to DB, error: {str(e)}"
 
-    # Sending email
+    if distance == 'ultra':
+        links = [RaceLink(link=l) for l in link]
+        new_athlete.race_link.extend(links)        
+        try:
+            db.session.add_all(links)
+            db.session.add(new_athlete)
+            db.session.commit()
+        except Exception as e:
+            return f"Couldn't add objects to DB, error: {str(e)}"
+    elif distance == 'sky':       
+        try:
+            db.session.add(new_athlete)
+            db.session.commit()
+        except Exception as e:
+            return f"Couldn't add objects to DB, error: {str(e)}"        
+
+    # send emails
     try:
         msg = Message('New Registered Athlete', sender="balkanultra.noreply@gmail.com",
                       recipients=['ivan.gotchev94@gmail.com'])
         msg.body = '''Registered new athlete:
                         first name - {}
                         last name - {}, 
-                        email - {}
+                        email - {},
+                        distance - {},
                         qualification races - {}'''.format(
-            first_name, last_name, email, link)
+            first_name, last_name, email, distance, link)
         mail.send(msg)
     except Exception as e:
         return f"Couldn't send email: {str(e)}"

@@ -8,6 +8,7 @@ class Athlete(db.Model):
     second_name = db.Column(db.String(100))
     last_name = db.Column(db.String(100))
     email = db.Column(db.String(100), unique=True)
+    distance = db.Column(db.String(50))
     gender = db.Column(db.String(100))
     age = db.Column(db.Integer)
     bonus_beds = db.Column(db.Integer)
@@ -27,7 +28,7 @@ class RaceLink(db.Model):
 class AthleteSchema(ma.Schema):
     class Meta:
         fields = ('id', 'first_name', 'second_name', 'last_name',
-                  'email', 'gender', 'age', 'bonus_beds')
+                  'email', 'distance', 'gender', 'age', 'bonus_beds')
 
 
 athlete_schema = AthleteSchema()
