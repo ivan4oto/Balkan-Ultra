@@ -62,7 +62,7 @@ def add_athlete():
 
     # send emails
     try:
-        msg = Message('New Registered Athlete', sender="balkanultra.noreply@gmail.com",
+        msg = Message('New Athlete on {}'.format(distance), sender="balkanultra.noreply@gmail.com",
                       recipients=['ivan.gotchev94@gmail.com'])
         msg.body = '''Registered new athlete:
                         first name - {}
