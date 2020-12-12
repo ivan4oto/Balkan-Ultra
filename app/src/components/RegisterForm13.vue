@@ -1,8 +1,8 @@
 <template>
-  <div>
+  <div :style="{'background-color': 'white'}">
     <div>
       <h2 class="d-flex justify-content-center text-info m-3">
-        Register for the 15k Skyrace!
+        Register for the 13k Skyrace!
       </h2>
     </div>
     <b-form
