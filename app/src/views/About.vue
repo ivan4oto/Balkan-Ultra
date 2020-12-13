@@ -2,9 +2,8 @@
   <div class="about m-4" style="display: flex;
                                 justify-content: center;
                                 align-items: center">
-      <b-container style='display: inline-block;'>
-
-        <b-container class="bv-example-row mb-3">
+      <b-container style='display: block'>
+        <b-container class="bv-example-row mb-3" style='display: inline-block;'>
           <b-row>
             <b-col>
               <div>
@@ -36,7 +35,6 @@
             </b-col>
           </b-row>
         </b-container>
-
         <div>
           <b-card bg-variant="dark" text-variant="white" title="GPX Track">
             <b-card-text>
@@ -61,7 +59,65 @@
             <li>Всякаква помощ извън контролните пунктове е забранена, и ако разберем ще трябва да ви дисквалифицираме, сори.</li>
           </ol>
         </div>
-      </b-container>
+<!-- 
+        <b-container>
+          <ul>
+            <li class='container'>
+              <b-img class='gearimg' src="../assets/icons/gear/icons8-headlamp-128.png" fluid alt="Fluid image"></b-img>
+              <h6 class='containertext'>Два броя челник.</h6>
+              </li>
+          </ul>            
+        </b-container> -->
+        <h3 class="d-flex justify-content-center mt-3 mb-4 geartitle">Задължителна екипировка:</h3>
+        <div class="d-flex" style="justify-content: center align-items: center;">
+        <b-container class="bv-example-row" style='display: inline-block;'>
+
+          <b-row class='m-2'>
+            <b-col sm='4'></b-col>
+            <b-col sm='2'><b-img class='gearimg' src="../assets/icons/gear/icons8-headlamp-128.png" fluid alt="Fluid image"></b-img></b-col>
+            <b-col class='centeralign' sm='3'><h6>Два броя челник.</h6></b-col>
+          </b-row>
+
+          <b-row class='m-2'>
+            <b-col sm='4'></b-col>
+            <b-col sm='2'><b-img class='gearimg' src="../assets/icons/gear/icons8-raincoat-96.png" fluid alt="Fluid image"></b-img></b-col>
+            <b-col class='centeralign' sm='3'><h6>Водоустойчиво яке.</h6></b-col>
+          </b-row>
+
+          <b-row class='m-2'>
+            <b-col sm='4'></b-col>
+            <b-col sm='2'><b-img class='gearimg' src="../assets/icons/gear/icons8-jumper-64.png" fluid alt="Fluid image"></b-img></b-col>
+            <b-col class='centeralign' sm='3'><h6>Горна блуза/термобельо с дълъг ръкав.</h6></b-col>
+            
+          </b-row>
+
+          <b-row class='m-2'>
+            <b-col sm='4'></b-col>
+            <b-col sm='2'><b-img class='gearimg' src="../assets/icons/gear/icons8-mitten-64.png" fluid alt="Fluid image"></b-img></b-col>
+            <b-col class='centeralign' sm='3'><h6>Ръкавици + шапка/бъф.</h6></b-col>
+          </b-row>
+
+          <b-row class='m-2'>
+            <b-col sm='4'></b-col>
+            <b-col sm='2'><b-img class='gearimg' src="../assets/icons/gear/icons8-phonelink-ring-64.png" fluid alt="Fluid image"></b-img></b-col>
+            <b-col class='centeralign' sm='3'><h6>Зареден мобилен телефон.</h6></b-col>
+          </b-row>
+
+          <b-row class='m-2'>
+            <b-col sm='4'></b-col>
+            <b-col sm='2'><b-img class='gearimg' src="../assets/icons/gear/icons8-near-me-64.png" fluid alt="Fluid image"></b-img></b-col>
+            <b-col class='centeralign' sm='3'><h6>GPS устройство.</h6></b-col>
+          </b-row>
+
+          <b-row class='m-2'>
+            <b-col sm='4'></b-col>
+            <b-col sm='2'><b-img class='gearimg' src="../assets/icons/gear/icons8-storm-64.png" fluid alt="Fluid image"></b-img></b-col>
+            <b-col class='centeralign' sm='3'><h6>Екипировката търпи промени според прогнозата. Евентуални промени ще бъдат съобщени на конференцията преди старта.</h6></b-col>
+          </b-row>      
+        
+        </b-container>
+        </div>
+    </b-container>
   </div>
 </template>
 
@@ -76,5 +132,19 @@ h3 {
 .rules {
   background-color: var(--orange);
   box-shadow: 0 2px 2px 0px rgb(107, 107, 107);
+}
+.gearimg {
+  height: 50px;
+  width: 50px;
+}
+.geartitle {
+  color: rgb(190, 11, 11);
+}
+
+.container {
+  display: inline-flex; /* or inline-flex */
+}
+.centeralign {
+  align-self: center;
 }
 </style>
