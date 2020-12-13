@@ -8,28 +8,28 @@
           <b-row>
             <b-col>
               <div>
-                <b-img src="../assets/icons8-bed-100.png" fluid alt="Fluid image"></b-img>
+                <b-img src="../assets/icons/icons8-bed-100.png" fluid alt="Fluid image"></b-img>
                 <h4>Спане</h4>
                 <p>Хижа Плевен предлага добри условия за спане, при регистрация ние ще ви запазим легло. Ако имате нужда от допълнителен брой легла, моля посочете във формата за регистрация. Около хижата има достатъчно голяма поляна за палаткуване, ако поради една или друга причина не може да отседнете в хижата.</p>
               </div>
             </b-col>
             <b-col>
               <div>
-                <b-img src="../assets/icons8-hamburger-100.png" fluid alt="Fluid image"></b-img>
+                <b-img src="../assets/icons/icons8-hamburger-100.png" fluid alt="Fluid image"></b-img>
                 <h4>Храна</h4>
                 <p>Също така хижа Плевен разполага с кухня и прясно приготвена храна, която може да закупите на място в столовата. Освен това ние ще осигурим паста парти вечерта преди състезанието и диня парти на финала.</p>
               </div>
             </b-col>
             <b-col>
               <div>
-                <b-img src="../assets/icons8-money-100.png" fluid alt="Fluid image"></b-img>
+                <b-img src="../assets/icons/icons8-money-100.png" fluid alt="Fluid image"></b-img>
                 <h4>Такса</h4>
                 <p>Участието е безплатно. Ако събитието ви харесва и искате да ни подкрепите всеки има възможност да го направи в кутията за дарения, която ще бъде на видно място в столовата.</p>
               </div>
             </b-col>
             <b-col>
               <div>
-                <b-img src="../assets/icons8-car-roof-box-100.png" fluid alt="Fluid image"></b-img>
+                <b-img src="../assets/icons/icons8-car-roof-box-100.png" fluid alt="Fluid image"></b-img>
                 <h4>Транспорт</h4>
                 <p>До хижа Плевен се стига след кратък 30 минутен преход от паркинга на ВЕЦ Видима. Ако не разполагате със собствен транспорт може да се комбинирате с някой от другите участници. Всъщност ултра маратонците не са толкова лоши хора и никой няма да ви открадне чорапите, докато спите в колата.</p>
               </div>
