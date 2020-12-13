@@ -1,7 +1,7 @@
 <template>
   <div class="m-3">
     <b-container>
-      <h3>Boys:</h3>
+      <h3>Момченца:</h3>
       <div class="results-frame-m">
         <b-table
           striped
@@ -11,7 +11,7 @@
           :tbody-tr-class="rowClass"
         ></b-table>
       </div>
-      <h3 class="mt-2">Girls:</h3>
+      <h3 class="mt-2">Момиченца:</h3>
       <div class="results-frame-f">
         <b-table
           striped
@@ -25,8 +25,6 @@
   </div>
 </template>
 <script>
-// const axios = require("axios").default;
-
 export default {
   name: "ResultsTable",
   data() {
@@ -66,6 +64,7 @@ export default {
     var fResults = require("../assets/fresults.json");
     var mResults = require("../assets/mresults.json");
     this.fResults = fResults;
+    console.log(fResults);
     this.mResults = mResults;
   },
 };

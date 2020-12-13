@@ -2,7 +2,7 @@
   <div>
     <div>
       <h2 class="d-flex justify-content-center text-info m-3">
-        Register for the 15k Skyrace!
+        Регистрирай се за 13км Sky
       </h2>
     </div>
     <b-form
@@ -13,7 +13,7 @@
     >
       <b-form-group
         id="input-group-1"
-        label="Email address:"
+        label="Електронна поща:"
         label-for="input-1"
       >
         <b-form-input
@@ -21,17 +21,17 @@
           v-model="form.email"
           type="email"
           required
-          placeholder="Enter email"
+          placeholder="Въведи поща"
         ></b-form-input>
       </b-form-group>
 
-      <b-form-group id="input-group-2" label="Names:" label-for="input-2">
+      <b-form-group id="input-group-2" label="Имена:" label-for="input-2">
         <b-form-input
           class="mb-2"
           id="input-2"
           v-model="form.firstname"
           required
-          placeholder="First name"
+          placeholder="Първо име"
         ></b-form-input>
 
         <b-form-input
@@ -39,7 +39,7 @@
           class="mb-2"
           v-model="form.secondname"
           required
-          placeholder="Second name"
+          placeholder="Бащино име"
         ></b-form-input>
 
         <b-form-input
@@ -47,13 +47,13 @@
           class="mb-2"
           v-model="form.lastname"
           required
-          placeholder="Last name"
+          placeholder="Фамилия"
         ></b-form-input>
       </b-form-group>
 
       <b-form-row align-h="start">
         <b-col cols="4">
-          <b-form-group id="input-group-3" label="Gender:" label-for="input-3">
+          <b-form-group id="input-group-3" label="Пол:" label-for="input-3">
             <b-form-select
               id="input-3"
               v-model="form.gender"
@@ -65,10 +65,10 @@
 
         <b-col cols="4">
           <b-form-group
-            label="Additional beds:"
+            label="Допълнителни легла:"
             description="Допълнителни легла за спане в хижа Плевен"
           >
-            <b-form-input type="number" placeholder="Extra beds" v-model="extraBeds">
+            <b-form-input type="number" placeholder="Брой допълнителни легла" v-model="extraBeds">
             </b-form-input>
           </b-form-group>
         </b-col>

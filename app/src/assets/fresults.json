@@ -1,0 +1,56 @@
+[
+    {
+        "Ranking": 1,
+        "Time": "17:12:39",
+        "Family name": "Цветанова",
+        "First name": "Десислава",
+        "Gender": "F",
+        "Nationality": "BUL",
+        "Bib number": 46
+    },
+    {
+        "Ranking": "DNF",
+        "Time": "",
+        "Family name": "Танева",
+        "First name": "Мая",
+        "Gender": "F",
+        "Nationality": "BUL",
+        "Bib number": 45
+    },
+    {
+        "Ranking": "DNF",
+        "Time": "",
+        "Family name": "Николова",
+        "First name": "Соня",
+        "Gender": "F",
+        "Nationality": "BUL",
+        "Bib number": 47
+    },
+    {
+        "Ranking": "DNF",
+        "Time": "",
+        "Family name": "Ралчева",
+        "First name": "Анета",
+        "Gender": "F",
+        "Nationality": "BUL",
+        "Bib number": 48
+    },
+    {
+        "Ranking": "DNF",
+        "Time": "",
+        "Family name": "Ангелова",
+        "First name": "Нели",
+        "Gender": "F",
+        "Nationality": "BUL",
+        "Bib number": 49
+    },
+    {
+        "Ranking": "DNF",
+        "Time": "",
+        "Family name": "Малчева",
+        "First name": "Гергана",
+        "Gender": "F",
+        "Nationality": "BUL",
+        "Bib number": 50
+    }
+]
