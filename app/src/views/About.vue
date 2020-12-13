@@ -46,8 +46,8 @@
             </b-card-text>
               <b-row>
                 <b-col></b-col>
-                <b-col><b-button href="#" variant="danger">Download GPX 80k ULTRA</b-button></b-col>
-                <b-col><b-button href="#" variant="info">Download GPX 13k SKY</b-button></b-col>
+                <b-col><b-button href="#" variant="danger">Свали GPX 80k ULTRA</b-button></b-col>
+                <b-col><b-button href="#" variant="info">Свали GPX 13k SKY</b-button></b-col>
               </b-row>
           </b-card>
         </div>

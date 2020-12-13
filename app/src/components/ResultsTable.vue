@@ -1,7 +1,7 @@
 <template>
   <div class="m-3">
     <b-container>
-      <h3>Boys:</h3>
+      <h3>Момченца:</h3>
       <div class="results-frame-m">
         <b-table
           striped
@@ -11,7 +11,7 @@
           :tbody-tr-class="rowClass"
         ></b-table>
       </div>
-      <h3 class="mt-2">Girls:</h3>
+      <h3 class="mt-2">Момиченца:</h3>
       <div class="results-frame-f">
         <b-table
           striped
