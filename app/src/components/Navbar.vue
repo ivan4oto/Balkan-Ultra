@@ -16,7 +16,7 @@
           </b-navbar-nav>
 
           <b-navbar-nav>
-            <router-link to="/Register">
+            <router-link to="Athletes">
               <b-button variant="dark" size="lg">Участници</b-button>
             </router-link>
           </b-navbar-nav>

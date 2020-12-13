@@ -25,8 +25,6 @@
   </div>
 </template>
 <script>
-// const axios = require("axios").default;
-
 export default {
   name: "ResultsTable",
   data() {
@@ -66,6 +64,7 @@ export default {
     var fResults = require("../assets/fresults.json");
     var mResults = require("../assets/mresults.json");
     this.fResults = fResults;
+    console.log(fResults);
     this.mResults = mResults;
   },
 };

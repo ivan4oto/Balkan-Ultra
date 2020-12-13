@@ -42,7 +42,7 @@ def add_athlete():
     link = request.json['link']
 
     new_athlete = Athlete(first_name=first_name, second_name=second_name, last_name=last_name,
-                          email=email, gender=gender, age=age, bonus_beds=bonus_beds)
+                          email=email, gender=gender, age=age, bonus_beds=bonus_beds, distance=distance)
 
     if distance == 'ultra':
         links = [RaceLink(link=l) for l in link]

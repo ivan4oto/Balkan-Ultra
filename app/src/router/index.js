@@ -3,6 +3,7 @@ import VueRouter from "vue-router";
 import Home from "../views/Home.vue";
 import Register from "../views/Register.vue";
 import Results from "../views/Results.vue";
+import Athletes from "../views/Athletes.vue";
 
 Vue.use(VueRouter);
 
@@ -21,6 +22,11 @@ const routes = [
     path: "/results",
     name: "Results",
     component: Results,
+  },
+  {
+    path: "/athletes",
+    name: "Athletes",
+    component: Athletes,
   },
   {
     path: "/about",

@@ -68,7 +68,7 @@
             label="Допълнителни легла:"
             description="Допълнителни легла за спане в хижа Плевен"
           >
-            <b-form-input type="number" placeholder="Брой допълнителни легла" v-model="extraBeds">
+            <b-form-input type="number" placeholder="Брой допълнителни легла" v-model="form.extraBeds">
             </b-form-input>
           </b-form-group>
         </b-col>
