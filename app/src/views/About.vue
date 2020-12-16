@@ -44,7 +44,7 @@
             </b-card-text>
               <b-row>
                 <b-col></b-col>
-                <b-col><b-button href="#" variant="danger">Свали GPX 80k ULTRA</b-button></b-col>
+                <b-col><b-button href="./../assets/tracks/Balkan_Sky.gpx" download="Balkan_Sky.gpx" variant="danger">Свали GPX 80k ULTRA</b-button></b-col>
                 <b-col><b-button href="#" variant="info">Свали GPX 13k SKY</b-button></b-col>
               </b-row>
           </b-card>
@@ -68,7 +68,7 @@
               </li>
           </ul>            
         </b-container> -->
-        <h3 class="d-flex justify-content-center mt-3 mb-4 geartitle">Задължителна екипировка:</h3>
+        <h3 class="d-flex justify-content-center mt-3 mb-4 geartitle">Задължителна екипировка (80км):</h3>
         <div class="d-flex" style="justify-content: center align-items: center;">
         <b-container class="bv-example-row" style='display: inline-block;'>
 
@@ -112,7 +112,7 @@
           <b-row class='m-2'>
             <b-col sm='4'></b-col>
             <b-col sm='2'><b-img class='gearimg' src="../assets/icons/gear/icons8-storm-64.png" fluid alt="Fluid image"></b-img></b-col>
-            <b-col class='centeralign' sm='3'><h6>Екипировката търпи промени според прогнозата. Евентуални промени ще бъдат съобщени на конференцията преди старта.</h6></b-col>
+            <b-col class='centeralign' sm='3'><h6>Екипировката търпи промени според метерологичната прогноза. Евентуални промени ще бъдат съобщени на конференцията преди старта.</h6></b-col>
           </b-row>      
         
         </b-container>

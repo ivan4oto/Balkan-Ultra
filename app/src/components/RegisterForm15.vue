@@ -1,10 +1,6 @@
 <template>
   <div>
-    <div>
-      <h2 class="d-flex justify-content-center text-info m-3">
-        Регистрирай се за 13км Sky
-      </h2>
-    </div>
+      <b-img src="../assets/pictures/13banner.jpg" fluid alt="Responsive image"></b-img>
     <b-form
       @submit="onSubmit"
       @reset="onReset"
@@ -68,7 +64,7 @@
             label="Допълнителни легла:"
             description="Допълнителни легла за спане в хижа Плевен"
           >
-            <b-form-input type="number" placeholder="Брой допълнителни легла" v-model="extraBeds">
+            <b-form-input type="number" placeholder="Брой допълнителни легла" v-model="form.extraBeds">
             </b-form-input>
           </b-form-group>
         </b-col>
@@ -82,8 +78,7 @@
         <b-button
           type="submit"
           variant="primary"
-          class="mr-1"
-          @click="submitForm()"
+          class="mr-1"        
           >Submit</b-button
         >
         <b-button type="reset" variant="danger">Reset</b-button>
@@ -123,6 +118,7 @@ export default {
     onSubmit(evt) {
       evt.preventDefault();
       alert(JSON.stringify(this.form));
+      this.submitForm();
     },
     onReset(evt) {
       evt.preventDefault();
@@ -151,7 +147,7 @@ export default {
           link: "",
         })
         .then(function(response) {
-          console.log(response);
+          console.log(response.data);
         })
         .catch(function(error) {
           console.log(error);
