@@ -1,10 +1,6 @@
 <template>
   <div>
-    <div>
-      <h2 class="d-flex justify-content-center m-3">
-        Регистрирай се за 80км Ultra
-      </h2>
-    </div>
+    <b-img src="../assets/pictures/80banner.jpg" fluid alt="Responsive image"></b-img>
     <b-form
       @submit="onSubmit"
       @reset="onReset"
@@ -106,7 +102,6 @@
           type="submit"
           variant="primary"
           class="mr-1"
-          @click="submitForm()"
           >Submit</b-button
         >
         <b-button type="reset" variant="danger">Reset</b-button>
@@ -158,6 +153,7 @@ export default {
     onSubmit(evt) {
       evt.preventDefault();
       alert(JSON.stringify(this.form));
+      this.submitForm();
     },
     onReset(evt) {
       evt.preventDefault();
@@ -199,7 +195,7 @@ export default {
 
 <style scoped>
 .reg-form {
-  border: 10px solid lightseagreen;
+  border: 10px solid rgb(150, 17, 0);
 }
 
 h2 {
