@@ -195,7 +195,7 @@ export default {
 
 <style scoped>
 .reg-form {
-  border: 10px solid rgb(150, 17, 0);
+  border: 3px solid rgb(150, 17, 0);
 }
 
 h2 {

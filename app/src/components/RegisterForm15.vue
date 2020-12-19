@@ -1,87 +1,49 @@
 <template>
   <div>
-      <b-img src="../assets/pictures/13banner.jpg" fluid alt="Responsive image"></b-img>
-    <b-form
-      @submit="onSubmit"
-      @reset="onReset"
-      v-if="show"
-      class="p-4 reg-form"
-    >
-      <b-form-group
-        id="input-group-1"
-        label="Електронна поща:"
-        label-for="input-1"
-      >
-        <b-form-input
-          id="input-1"
-          v-model="form.email"
-          type="email"
-          required
-          placeholder="Въведи поща"
-        ></b-form-input>
-      </b-form-group>
-
+    <b-img src="../assets/pictures/13banner.jpg" fluid alt="Responsive image"></b-img>
+    <b-form @submit="onSubmit" @reset="onReset" v-if="show"  class="p-3 reg-form">
+      <b-row>
+        <b-col>
+          <b-form-group id="input-group-1" label="Електронна поща:" label-for="input-1">
+            <b-form-input id="input-1" v-model="form.email" type="email" required placeholder="Въведи поща"></b-form-input>
+          </b-form-group>
+        </b-col>
+      </b-row>
       <b-form-group id="input-group-2" label="Имена:" label-for="input-2">
-        <b-form-input
-          class="mb-2"
-          id="input-2"
-          v-model="form.firstname"
-          required
-          placeholder="Първо име"
-        ></b-form-input>
-
-        <b-form-input
-          id="input-2"
-          class="mb-2"
-          v-model="form.secondname"
-          required
-          placeholder="Бащино име"
-        ></b-form-input>
-
-        <b-form-input
-          id="input-2"
-          class="mb-2"
-          v-model="form.lastname"
-          required
-          placeholder="Фамилия"
-        ></b-form-input>
+        <b-row>
+          <b-col sm>
+            <b-form-input id="input-2" v-model="form.firstname" required placeholder="Първо име"></b-form-input>
+          </b-col>
+          <b-col sm>
+            <b-form-input id="input-2" v-model="form.secondname" required placeholder="Бащино име"></b-form-input>
+          </b-col>
+          <b-col sm>
+            <b-form-input id="input-2" v-model="form.lastname" required placeholder="Фамилия"></b-form-input>
+          </b-col>        
+        </b-row>
       </b-form-group>
 
-      <b-form-row align-h="start">
-        <b-col cols="4">
-          <b-form-group id="input-group-3" label="Пол:" label-for="input-3">
-            <b-form-select
-              id="input-3"
-              v-model="form.gender"
-              :options="genders"
-              required
-            ></b-form-select>
-          </b-form-group>
+      <b-row>
+          <b-col sm>
+            <b-form-group id="input-group-3" label="Пол:" label-for="input-3">
+              <b-form-select id="input-3" v-model="form.gender" :options="genders" required></b-form-select>
+            </b-form-group>
+          </b-col>
+        
+         
+          <b-col sm>
+            <b-form-group label="Допълнителни легла:" description="Допълнителни легла за спане в хижа Плевен">
+              <b-form-input type="number" placeholder="Брой допълнителни легла" v-model="form.extraBeds"></b-form-input>
+            </b-form-group>
+          </b-col>
+        
+      </b-row>
+
+      <b-row class='text-center'>
+        <b-col>
+          <b-button type="submit" variant="primary" class="mr-1">Submit</b-button>
+          <b-button type="reset" variant="danger">Reset</b-button>
         </b-col>
-
-        <b-col cols="4">
-          <b-form-group
-            label="Допълнителни легла:"
-            description="Допълнителни легла за спане в хижа Плевен"
-          >
-            <b-form-input type="number" placeholder="Брой допълнителни легла" v-model="form.extraBeds">
-            </b-form-input>
-          </b-form-group>
-        </b-col>
-      </b-form-row>
-
-      <b-list-group v-for="link in form.raceLinks" v-bind:key="link">
-        <b-list-group-item>{{ link }}</b-list-group-item>
-      </b-list-group>
-
-      <b-row class="justify-content-md-center pt-5">
-        <b-button
-          type="submit"
-          variant="primary"
-          class="mr-1"        
-          >Submit</b-button
-        >
-        <b-button type="reset" variant="danger">Reset</b-button>
       </b-row>
     </b-form>
 
@@ -166,6 +128,6 @@ export default {
 
 <style scoped>
 .reg-form {
-  border: 10px solid lightseagreen;
+  border: 3px solid lightseagreen;
 }
 </style>
