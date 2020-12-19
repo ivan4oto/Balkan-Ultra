@@ -1,10 +1,12 @@
 <template>
   <div class="home">
-    <b-container class='mt-3 mb-4'>
+    <b-container class='mt-4 d-none d-sm-block' >
       <h3 class="d-flex justify-content-center">Регистрирани участници:</h3>
+      <Participants />
     </b-container>
-  
-    <Participants />
+    <div class='d-block d-sm-none'>
+      <Participants />
+    </div>
   </div>
 </template>
 

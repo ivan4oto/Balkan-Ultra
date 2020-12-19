@@ -1,6 +1,11 @@
 <template>
   <div class="home">
-    <ResultsTable />
+    <b-container class='mt-4 d-none d-sm-block'>
+      <ResultsTable />
+    </b-container>
+    <div class='d-block d-sm-none'>
+      <ResultsTable />
+    </div>
   </div>
 </template>
 

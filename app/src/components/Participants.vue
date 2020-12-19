@@ -1,16 +1,14 @@
 <template>
   <div class="m-3">
-    <b-container>
-      <div class="frame">
         <b-table
           striped
+          table-variant: dark
+          responsive
+          small
           hover
           :items="athletes"
           :fields="fields"
-          :tbody-tr-class="rowClass"
         ></b-table>
-      </div>
-    </b-container>
   </div>
 </template>
 <script>
@@ -58,11 +56,6 @@ export default {
         .then(function (){
             // always executed
         });
-    },
-    rowClass(item, type) {
-      if (!item || type !== "row") return;
-      if (item.Ranking !== "DNF") return "table-info";
-      if (item.Ranking === "DNF") return "table-danger";
     },
   },
   mounted: function() {

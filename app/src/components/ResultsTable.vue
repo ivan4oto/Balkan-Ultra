@@ -1,27 +1,45 @@
 <template>
   <div class="m-3">
-    <b-container>
-      <h3>Момченца:</h3>
-      <div class="results-frame-m">
+      <div style="display: flex;
+                 justify-content: center;
+                 align-items: center"
+            class="mb-2">
+        <b-img src="../assets/icons/boy.png" fluid alt="Fluid image"></b-img>
+        <h3></h3>
+      </div>
+      <div >
         <b-table
+          small
+          outlined
           striped
+          responsive
+          table-variant: dark
+          text: info
           hover
           :items="mResults"
           :fields="fields"
           :tbody-tr-class="rowClass"
         ></b-table>
       </div>
-      <h3 class="mt-2">Момиченца:</h3>
+      <div style="display: flex;
+                 justify-content: center;
+                 align-items: center"
+            class="m-2">
+        <b-img src="../assets/icons/girl.png" fluid alt="Fluid image"></b-img>
+      </div>
       <div class="results-frame-f">
         <b-table
+          small
+          outlined
           striped
+          responsive
           hover
+          table-variant: dark
           :items="fResults"
           :fields="fields"
           :tbody-tr-class="rowClass"
         ></b-table>
       </div>
-    </b-container>
   </div>
 </template>
 <script>
@@ -55,7 +73,6 @@ export default {
   methods: {
     rowClass(item, type) {
       if (!item || type !== "row") return;
-      if (item.Ranking !== "DNF") return "table-success";
       if (item.Ranking === "DNF") return "table-danger";
     },
   },

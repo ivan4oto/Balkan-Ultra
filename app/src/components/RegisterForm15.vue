@@ -147,12 +147,19 @@ export default {
           link: "",
         })
         .then(function(response) {
-          console.log(response.data);
+          console.log(response.data)
         })
         .catch(function(error) {
           console.log(error);
         });
     },
+    isMobile() {
+      if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+        return true
+      } else {
+        return false
+      }
+    }
   },
 };
 </script>

@@ -1,7 +1,5 @@
 <template>
     <div>
-      <b-container class='mt-4'>
-
         <b-carousel
           id="carousel-fade"
           style="text-shadow: 0px 0px 2px #000"
@@ -27,8 +25,6 @@
         <h4>-Калоян Кофе Пейчев</h4>
         <!-- <h1 class='mt-4'><strong>"UTMB носи точки за Балкан Ултра!"</strong></h1>
         <h4>-Иван Гочев</h4> -->
-      </b-container>
-      
     </div>
 </template>
 
@@ -54,15 +50,18 @@ export default {
 </script>
 
 <style scoped>
-@media only screen and (max-width: 375) {
+@media (max-width: 767px) {
   h1 {
+   font-size: 20px;
+  }
+  h4 {
     font-size: 15px;
-    color: rgb(136, 4, 4);
   }
 }
-h1 {
+
+/* h1 {
   font-size: 60px;
   font-weight: bolder;
   color: rgb(136, 4, 4);
-}
+} */
 </style>
