@@ -27,7 +27,7 @@
             class="m-2">
         <b-img src="../assets/icons/girl.png" fluid alt="Fluid image"></b-img>
       </div>
-      <div class="results-frame-f">
+      <div>
         <b-table
           small
           outlined
@@ -37,7 +37,6 @@
           table-variant: dark
           :items="fResults"
           :fields="fields"
-          :tbody-tr-class="rowClass"
         ></b-table>
       </div>
   </div>
@@ -71,10 +70,7 @@ export default {
     };
   },
   methods: {
-    rowClass(item, type) {
-      if (!item || type !== "row") return;
-      if (item.Ranking === "DNF") return "table-danger";
-    },
+  
   },
   mounted: function() {
     console.log("mounted");
@@ -88,11 +84,4 @@ export default {
 </script>
 
 <style scoped>
-.results-frame-m {
-  border: 10px solid lightseagreen;
-}
-
-.results-frame-f {
-  border: 10px solid palevioletred;
-}
 </style>

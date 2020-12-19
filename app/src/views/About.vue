@@ -19,6 +19,12 @@
         </h6>
       </b-row>
     </b-container>
+    <b-container class='mt-3'>
+      <b-img src='../assets/pictures/profile80.jpg' fluid alt="Fluid image"></b-img>
+    </b-container>
+    <b-container class='mt-3'>
+      <b-img src='../assets/pictures/profile13.jpg' fluid alt="Fluid image"></b-img>
+    </b-container>
 
     <b-container class='important'>
       <b-row align-h='center'>
