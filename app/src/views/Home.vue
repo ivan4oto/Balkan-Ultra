@@ -1,6 +1,11 @@
 <template>
   <div class="home">
-    <HelloWorld />
+    <b-container class='mt-4 d-none d-sm-block' >
+      <HelloWorld />
+    </b-container>
+    <div class='d-block d-sm-none'>
+      <HelloWorld />
+    </div>
   </div>
 </template>
 
