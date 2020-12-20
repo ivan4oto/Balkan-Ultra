@@ -3,11 +3,11 @@
     <b-container class='gpxbox'>
       <b-row class='text-center'><b-col><h2>Свали GPX track от тук</h2></b-col></b-row>
       <b-row class='text-center' align-h='center'>
-        <b-col><b-button href="./../assets/tracks/Balkan_Sky.gpx" download="Balkan_Sky.gpx" variant="danger">Свали GPX 80k ULTRA</b-button></b-col>
-        <b-col><b-button href="#" variant="info">Свали GPX 13k SKY</b-button></b-col>
+        <b-col><b-button href="Balkan_Ultra.gpx" download variant="danger">Свали GPX 80k ULTRA</b-button></b-col>
+        <b-col><b-button href="Balkan_Sky.gpx" variant="info">Свали GPX 13k SKY</b-button></b-col>
       </b-row>  
     </b-container>
-    <b-container class='mt-3 p-3 information reqs'>
+    <b-container class='mt-3 p-3 text-center information reqs'>
       <b-row class="text-center">
         <b-col><h3>Условия за участие <strong>80k ULTRA</strong></h3></b-col>        
       </b-row>
@@ -30,7 +30,7 @@
       <b-row align-h='center'>
         <h3 class="mt-3 mb-4 geartitle text-center">Задължителна екипировка (80км):</h3>
       </b-row>
-      <b-row class='text-center' cols="1" cols-sm="2" cols-md="4" cols-lg="4">
+      <b-row class='text-center' cols="1" cols-sm="2" cols-md="4" cols-lg="4" align-h='center'>
         <b-col sm><b-img class='gearimg' src="../assets/icons/gear/icons8-raincoat-96.png" fluid alt="Fluid image"></b-img> <p><strong>Водонепромокаемо яке.</strong>Гледайте да не пропуска. Износена мембрана с 20к воден стълб, която пуска вода на петата минута няма да ви свърши работа, ако завали стабилно.</p></b-col>
         <b-col sm><b-img class='gearimg' src="../assets/icons/gear/icons8-jumper-64.png" fluid alt="Fluid image"></b-img> <p><strong>Блуза/термо бельо с дълъг ръкав.</strong> Ако е от вълна то ще ви пази топли дори и да се намокри.</p></b-col>
         <b-col sm><b-img class='gearimg' src="../assets/icons/gear/icons8-mitten-64.png" fluid alt="Fluid image"></b-img> <p><strong>Чифт ръкавици.</strong></p></b-col>
@@ -79,6 +79,6 @@
     color: rgb(86, 114, 112);
   }
   .reqs{
-    background-color: rgb(217, 247, 245);
+    background-color: rgb(247, 204, 176);
   }
 </style>
