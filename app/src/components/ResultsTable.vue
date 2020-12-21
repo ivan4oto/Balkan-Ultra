@@ -3,8 +3,8 @@
       <div style="display: flex;
                  justify-content: center;
                  align-items: center"
-            class="mb-2">
-        <b-img src="../assets/icons/boy.png" fluid alt="Fluid image"></b-img>
+            class="mt-2">
+        <b-img src="../assets/pictures/men.jpg" fluid alt="Fluid image"></b-img>
         <h3></h3>
       </div>
       <div >
@@ -24,8 +24,8 @@
       <div style="display: flex;
                  justify-content: center;
                  align-items: center"
-            class="m-2">
-        <b-img src="../assets/icons/girl.png" fluid alt="Fluid image"></b-img>
+            class="mt-4">
+        <b-img src="../assets/pictures/women.jpg" fluid alt="Fluid image"></b-img>
       </div>
       <div>
         <b-table

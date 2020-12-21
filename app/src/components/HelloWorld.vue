@@ -21,10 +21,10 @@
             img-src="../assets/pictures/c3.jpg"
           ></b-carousel-slide>
         </b-carousel>
-        <h1 class='mt-4'><strong>"Само при мисълта за старт на Балкан ултра ми се изпотяват дланите."</strong></h1>
-        <h4>-Калоян Кофе Пейчев</h4>
-        <!-- <h1 class='mt-4'><strong>"UTMB носи точки за Балкан Ултра!"</strong></h1>
-        <h4>-Иван Гочев</h4> -->
+        <b-row>
+          <b-col sm><b-img src="../assets/pictures/main-1.jpg" fluid alt="Fluid image"></b-img></b-col>
+          <b-col sm><b-img src="../assets/pictures/main-2.jpg" fluid alt="Fluid image"></b-img></b-col>
+        </b-row>
     </div>
 </template>
 
@@ -50,18 +50,17 @@ export default {
 </script>
 
 <style scoped>
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 @media (max-width: 767px) {
   h1 {
    font-size: 20px;
+   font-family: 'Roboto', sans-serif;
   }
   h4 {
     font-size: 15px;
+    font-family: 'Roboto', sans-serif;
   }
 }
 
-/* h1 {
-  font-size: 60px;
-  font-weight: bolder;
-  color: rgb(136, 4, 4);
-} */
+
 </style>
