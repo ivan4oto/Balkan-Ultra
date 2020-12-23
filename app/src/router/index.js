@@ -4,6 +4,7 @@ import Home from "../views/Home.vue";
 import Register from "../views/Register.vue";
 import Results from "../views/Results.vue";
 import Athletes from "../views/Athletes.vue";
+import Success from "../views/Success.vue";
 
 Vue.use(VueRouter);
 
@@ -12,6 +13,11 @@ const routes = [
     path: "/",
     name: "Home",
     component: Home,
+  },
+  {
+    path: "/success",
+    name: "Success",
+    component: Success,
   },
   {
     path: "/register",

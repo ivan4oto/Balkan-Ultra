@@ -7,12 +7,16 @@ import router from "./router";
 
 Vue.config.productionTip = false;
 
-new Vue({
-  router,
-  render: (h) => h(App),
-}).$mount("#app");
 
 Vue.mixin({
+  data: function() {
+    return {
+      get api_uri() {
+        var paths = require("./assets/uri_config.json");
+        return paths
+      }
+    }
+  },
   methods: {
     isMobile() {
       if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
@@ -23,3 +27,8 @@ Vue.mixin({
     }
   },
 })
+
+new Vue({
+  router,
+  render: (h) => h(App),
+}).$mount("#app");

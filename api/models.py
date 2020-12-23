@@ -7,7 +7,8 @@ class Athlete(db.Model):
     first_name = db.Column(db.String(100))
     second_name = db.Column(db.String(100))
     last_name = db.Column(db.String(100))
-    email = db.Column(db.String(100), unique=True)
+    email = db.Column(db.String(100))
+    phone_number = db.Column(db.String(100))
     distance = db.Column(db.String(50))
     gender = db.Column(db.String(100))
     age = db.Column(db.Integer)
@@ -28,7 +29,7 @@ class RaceLink(db.Model):
 class AthleteSchema(ma.Schema):
     class Meta:
         fields = ('id', 'first_name', 'second_name', 'last_name',
-                  'email', 'distance', 'gender', 'age', 'bonus_beds')
+                  'email', 'phone_number' 'distance', 'gender', 'age', 'bonus_beds')
 
 
 athlete_schema = AthleteSchema()

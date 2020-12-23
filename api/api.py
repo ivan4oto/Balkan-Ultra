@@ -36,13 +36,14 @@ def add_athlete():
     second_name = request.json['second_name']
     last_name = request.json['last_name']
     email = request.json['email']
+    phone_number = request.json['phone_number']
     gender = request.json['gender']
     age = request.json['age']
     bonus_beds = request.json['bonus_beds']
     link = request.json['link']
 
     new_athlete = Athlete(first_name=first_name, second_name=second_name, last_name=last_name,
-                          email=email, gender=gender, age=age, bonus_beds=bonus_beds, distance=distance)
+                          email=email, phone_number=phone_number, gender=gender, age=age, bonus_beds=bonus_beds, distance=distance)
 
     if distance == 'ultra':
         links = [RaceLink(link=l) for l in link]
@@ -62,15 +63,16 @@ def add_athlete():
 
     # send emails
     try:
-        msg = Message('New Athlete on {}'.format(distance), sender="balkanultra.noreply@gmail.com",
+        msg = Message('New Athlete on {}'.format(distance), sender="balkan@balkanultra.com",
                       recipients=['ivan.gotchev94@gmail.com'])
         msg.body = '''Registered new athlete:
                         first name - {}
                         last name - {}, 
                         email - {},
+                        phone - {},
                         distance - {},
                         qualification races - {}'''.format(
-            first_name, last_name, email, distance, link)
+            first_name, last_name, email, phone_number, distance, link)
         mail.send(msg)
     except Exception as e:
         return f"Couldn't send email: {str(e)}"

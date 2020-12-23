@@ -10,10 +10,10 @@ CORS(api)
 
 # set configs
 api.config.update(
-    MAIL_SERVER='smtp.gmail.com',
+    MAIL_SERVER='balkanultra.com',
     MAIL_PORT=465,
     MAIL_USE_SSL=True,
-    MAIL_USERNAME='balkanultra.noreply@gmail.com',
+    MAIL_USERNAME='balkan@balkanultra.com',
     MAIL_PASSWORD=os.environ["MAIL_PASSWORD"]
 )
 
