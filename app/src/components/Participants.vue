@@ -45,9 +45,9 @@ export default {
   methods: {
     getAthletes() {
       axios
-        .get("http://127.0.0.1:5000/athlete")
+        .get(this.api_uri['athlete'])
         .then((response) => {
-          console.log(response.data);
+          console.log(response.status);
           this.athletes = response.data;
         })
         .catch(function(error) {

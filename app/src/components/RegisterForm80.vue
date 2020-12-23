@@ -8,6 +8,11 @@
             <b-form-input id="input-1" v-model="form.email" type="email" required placeholder="Въведи поща"></b-form-input>
           </b-form-group>
         </b-col>
+        <b-col>
+          <b-form-group id="input-group-1" label="Телефонен номер:" label-for="input-1">
+            <b-form-input v-model="form.phone_number" type="text" maxlength="15" required placeholder="Въведи телефон за връзка"></b-form-input>
+          </b-form-group>
+        </b-col>
       </b-row>
       <b-form-group id="input-group-2" label="Имена:" label-for="input-2">
         <b-row>
@@ -33,7 +38,7 @@
          
           <b-col sm>
             <b-form-group label="Допълнителни легла:" description="Допълнителни легла за спане в хижа Плевен">
-              <b-form-input type="number" placeholder="Брой допълнителни легла" v-model="form.extraBeds"></b-form-input>
+              <b-form-input type="number" min="0"  max="7" placeholder="Брой допълнителни легла" v-model="form.extraBeds"></b-form-input>
             </b-form-group>
           </b-col>
         
@@ -80,6 +85,7 @@ export default {
       form: {
         distance: "ultra",
         email: "",
+        phone_number: "",
         firstname: "",
         secondname: "",
         lastname: "",
@@ -125,11 +131,12 @@ export default {
     },
     submitForm() {
       axios
-        .post("http://127.0.0.1:5000/athlete", {
+        .post(this.api_uri['athlete'], {
           first_name: this.form.firstname,
           second_name: this.form.secondname,
           last_name: this.form.lastname,
           email: this.form.email,
+          phone_number: this.form.phone_number,
           gender: this.form.gender,
           age: this.form.age,
           bonus_beds: this.form.extraBeds,
@@ -137,7 +144,7 @@ export default {
           distance: this.form.distance
         })
         .then(function(response) {
-          console.log(response);
+          console.log(response.status);
         })
         .catch(function(error) {
           console.log(error);

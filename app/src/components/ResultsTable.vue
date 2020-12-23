@@ -73,11 +73,9 @@ export default {
   
   },
   mounted: function() {
-    console.log("mounted");
     var fResults = require("../assets/fresults.json");
     var mResults = require("../assets/mresults.json");
     this.fResults = fResults;
-    console.log(fResults);
     this.mResults = mResults;
   },
 };
