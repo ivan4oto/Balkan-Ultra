@@ -25,6 +25,14 @@
           <b-col sm><b-img src="../assets/pictures/main-1.jpg" fluid alt="Fluid image"></b-img></b-col>
           <b-col sm><b-img src="../assets/pictures/main-2.jpg" fluid alt="Fluid image"></b-img></b-col>
         </b-row>
+        <b-container class='mt-2'>
+        <b-embed
+          type="iframe"
+          aspect="16by9"
+          src="https://www.youtube.com/embed/zaJccw5h5P4"
+          allowfullscreen
+        ></b-embed>
+        </b-container>
     </div>
 </template>
 
