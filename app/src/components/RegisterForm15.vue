@@ -1,6 +1,20 @@
 <template>
   <div>
-    <b-img src="../assets/pictures/13banner.jpg" fluid alt="Responsive image"></b-img>
+    <b-card
+      overlay
+      img-src="../assets/pictures/13banner.jpg"
+      img-alt="Card Image"
+      text-variant="white"
+      class='text-right'
+      title=""
+      sub-title=""
+    >
+      <div id="card-div">
+
+      <h1 id='card-txt'>13км СКАЙ</h1>
+      <h2 id='card-txt-small'>1700м положителна денивелация</h2>
+      </div>
+    </b-card>
     <b-form @submit="onSubmit" @reset="onReset" v-if="show"  class="p-3 reg-form">
       <b-row>
         <b-col>
@@ -85,7 +99,6 @@ export default {
   methods: {
     onSubmit(evt) {
       evt.preventDefault();
-      alert(JSON.stringify(this.form));
       this.submitForm();
     },
     onReset(evt) {
@@ -131,5 +144,21 @@ export default {
 <style scoped>
 .reg-form {
   border: 3px solid lightseagreen;
+}
+
+#card-txt-small {
+  color: rgb(68, 214, 233);
+  font-family: 'SPArielBG';
+  margin-right: 5%;
+  font-size: 2vw;
+}
+
+#card-txt{
+  font-family: 'SPArielBG';
+  font-weight: bold;
+  font-style: italic;
+  color: rgb(135, 248, 248);
+  font-size: 7vw;
+  margin-right: 5%;
 }
 </style>

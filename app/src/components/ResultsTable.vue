@@ -1,13 +1,17 @@
 <template>
   <div class="m-3">
-      <div style="display: flex;
-                 justify-content: center;
-                 align-items: center"
-            class="mt-2">
-        <b-img src="../assets/pictures/men.jpg" fluid alt="Fluid image"></b-img>
-        <h3></h3>
-      </div>
-      <div >
+    <b-card
+      overlay
+      img-src="../assets/pictures/men.jpg"
+      img-alt="Card Image"
+      text-variant="white"
+      class='text-left'
+      title=""
+      sub-title=""
+    >
+      <h1 id='card-txt-male'>МЪЖЕ</h1>
+    </b-card>
+      <div>
         <b-table
           small
           outlined
@@ -21,12 +25,18 @@
           :tbody-tr-class="rowClass"
         ></b-table>
       </div>
-      <div style="display: flex;
-                 justify-content: center;
-                 align-items: center"
-            class="mt-4">
-        <b-img src="../assets/pictures/women.jpg" fluid alt="Fluid image"></b-img>
-      </div>
+      <b-card
+      overlay
+      img-src="../assets/pictures/women.jpg"
+      img-alt="Card Image"
+      text-variant="white"
+      class='text-left'
+      title=""
+      sub-title=""
+    >
+      <h1 id='card-txt-male'>ЖЕНИ</h1>
+    </b-card>
+
       <div>
         <b-table
           small
@@ -82,4 +92,12 @@ export default {
 </script>
 
 <style scoped>
+#card-txt-male{
+  font-family: 'SPArielBG';
+  font-weight: bold;
+  font-style: italic;
+  color: rgb(235, 166, 37);
+  font-size: 7vw;
+  margin-right: 5%;
+}
 </style>

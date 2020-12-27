@@ -1,5 +1,18 @@
 <template>
   <div class="m-3">
+    <b-card
+      overlay
+      img-src="../assets/pictures/participants-banner.jpg"
+      img-alt="Card Image"
+      text-variant="white"
+      class='text-center'
+      title=""
+      sub-title=""
+    >
+    <b-card-text>
+      <h2 id='card-txt'>Регистрирани участници</h2>
+    </b-card-text>
+    </b-card>
         <b-table
           striped
           table-variant: dark
@@ -22,20 +35,24 @@ export default {
       fields: [
         {
           key: "first_name",
+          label: "Име",
           sortable: false
         },
         {
           key: "last_name",
+          label: "Фамилия",
           sortable: false,
         },
         {
           key: "gender",
+          label: "Пол",
           sortable: true,
           // Variant applies to the whole column, including the header and footer
           variant: "",
         },
         {
           key: "distance",
+          label: "Трасе",
           sortable: true,
         },
       ],
@@ -47,7 +64,7 @@ export default {
       axios
         .get(this.api_uri['athlete'])
         .then((response) => {
-          console.log(response.status);
+          console.log(response.data);
           this.athletes = response.data;
         })
         .catch(function(error) {
@@ -68,5 +85,12 @@ export default {
 <style scoped>
 .frame {
   border: 5px solid rgb(34, 60, 87);
+}
+#card-txt{
+  font-family: 'SPArielBG';
+  font-weight: bold;
+  color: rgb(199, 224, 87);
+  font-size: calc(15px + 2vw);
+  margin-top: 5%;
 }
 </style>

@@ -38,6 +38,27 @@ export default {
 </script>
 
 <style>
+@font-face {
+  font-family: 'SPArielBG';
+  src:  url('./assets/fonts/SPArielBG.otf') format('opentype');        
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SPArielBG';
+  src:  url('./assets/fonts/SPArielBG-Bold.otf') format('opentype');        
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SPArielBG';
+  src:  url('./assets/fonts/SPArielBG-BoldItalic.otf') format('opentype');        
+  font-weight: bold;
+  font-style: italic;
+}
+
 #mynavbar{
   box-shadow: 0 4px 6px 1px rgb(107, 107, 107);
 }

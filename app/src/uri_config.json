@@ -1,4 +1,4 @@
 {
-    "athlete": "api/athlete",
+    "athlete": "http://127.0.0.1:5000/athlete",
     "racelink": "api/racelink"
 }

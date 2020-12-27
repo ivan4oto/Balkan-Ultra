@@ -15,7 +15,7 @@ Vue.mixin({
   data: function() {
     return {
       get api_uri() {
-        var paths = require("./assets/uri_config.json");
+        var paths = require("./uri_config.json");
         return paths
       }
     }

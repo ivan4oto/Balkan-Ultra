@@ -12,10 +12,10 @@
         <b-col><h3>Условия за участие <strong>80k ULTRA</strong></h3></b-col>        
       </b-row>
       <b-row>
-        <h6>Всеки от участниците трябва да има предоставена валидна планинска застраховка преди старта на състезанието.<br>
-            Завършени две състезания с минимум 4000 метра D+ всяко за последните 3 години /период 2017 - 2020 г./. Дължината на състезанията е без значение.<br>
-            Разполагате със собствено GPS устройство /часовник, pъчен GPS, мобилен телефон с планинарска карта/ и може да се ориентирате по предоставена GPS следа. Вграден чип в главата от Бил Гейтс не се приема.<br>
-            Всякаква помощ извън контролните пунктове е забранена, и ако разберем ще трябва да ви дисквалифицираме.
+        <h6>1. Всеки от участниците трябва да има предоставена валидна планинска застраховка преди старта на състезанието.<br>
+            2. Завършени две състезания с минимум 4000 метра D+ всяко за последните 3 години /период 2017 - 2020 г./. Дължината на състезанията е без значение.<br>
+            3. Разполагате със собствено GPS устройство /часовник, pъчен GPS, мобилен телефон с планинарска карта/ и може да се ориентирате по предоставена GPS следа. Вграден чип в главата от Бил Гейтс не се приема.<br>
+            4. Всякаква помощ извън контролните пунктове е забранена, и ако разберем ще трябва да ви дисквалифицираме.
         </h6>
       </b-row>
     </b-container>
@@ -34,8 +34,8 @@
         <b-col sm><b-img class='gearimg' src="../assets/icons/gear/icons8-raincoat-96.png" fluid alt="Fluid image"></b-img> <p><strong>Водонепромокаемо яке.</strong>Гледайте да не пропуска. Износена мембрана с 20к воден стълб, която пуска вода на петата минута няма да ви свърши работа, ако завали стабилно.</p></b-col>
         <b-col sm><b-img class='gearimg' src="../assets/icons/gear/icons8-jumper-64.png" fluid alt="Fluid image"></b-img> <p><strong>Блуза/термо бельо с дълъг ръкав.</strong> Ако е от вълна то ще ви пази топли дори и да се намокри.</p></b-col>
         <b-col sm><b-img class='gearimg' src="../assets/icons/gear/icons8-mitten-64.png" fluid alt="Fluid image"></b-img> <p><strong>Чифт ръкавици.</strong></p></b-col>
-        <b-col sm><b-img class='gearimg' src="../assets/icons/gear/icons8-headlamp-128.png" fluid alt="Fluid image"></b-img> <p><strong>Минимум два челника</strong></p></b-col>
         <b-col sm><b-img class='gearimg' src="../assets/icons/gear/icons8-phonelink-ring-64.png" fluid alt="Fluid image"></b-img> <p><strong>Телефон със заредена батерия.</strong>Гледайте да не е на 5% батерия на хижа Левски от много селфита.</p></b-col>
+        <b-col sm><b-img class='gearimg' src="../assets/icons/gear/icons8-headlamp-128.png" fluid alt="Fluid image"></b-img> <p><strong>Минимум два челника</strong></p></b-col>
         <b-col sm><b-img class='gearimg' src="../assets/icons/gear/icons8-near-me-64.png" fluid alt="Fluid image"></b-img> <p><strong>GPS навигационно устройство</strong> със зареден трак на трасето.</p></b-col>
         <b-col sm><b-img class='gearimg' src="../assets/icons/gear/icons8-storm-64.png" fluid alt="Fluid image"></b-img> <p>В зависимост от метерологичната прогноза може да променим задължителната екипировка.</p></b-col>
       </b-row>
@@ -50,6 +50,12 @@
         <b-col sm><b-img class='gearimg' src="../assets/icons/icons8-money-100.png" fluid alt="Fluid image"></b-img><h4>Такса</h4><p>Участието е безплатно. Ако събитието ви харесва и искате да ни подкрепите всеки има възможност да го направи в кутията за дарения, която ще бъде на видно място в столовата.</p></b-col>
         <b-col sm><b-img class='gearimg' src="../assets/icons/icons8-car-roof-box-100.png" fluid alt="Fluid image"></b-img><h4>Транспорт</h4><p>До хижа Плевен се стига след кратък 30 минутен преход от паркинга на ВЕЦ Видима. Ако не разполагате със собствен транспорт може да се комбинирате с някой от другите участници. Всъщност ултра маратонците не са толкова лоши хора и никой няма да ви открадне чорапите, докато спите в колата.</p></b-col>
       </b-row>
+    </b-container>
+    <b-container>
+    <b-row class='mt-4'><h3>Карта на трасе 80км:</h3></b-row>
+    <b-row><b-img src='../assets/pictures/map80.jpg' fluid alt="Fluid image"></b-img></b-row>
+    <b-row class='mt-4'><h3>Карта на трасе 13км:</h3></b-row>
+    <b-row><b-img src='../assets/pictures/map13.jpg' fluid alt="Fluid image"></b-img></b-row>
     </b-container>
 
   </div>
@@ -80,5 +86,8 @@
   }
   .reqs{
     background-color: rgb(247, 204, 176);
+  }
+  h3, h2, h6, p{
+    font-family: 'SPArielBG';
   }
 </style>

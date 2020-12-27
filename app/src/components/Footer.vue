@@ -4,7 +4,7 @@
 			<b-row class='text-center'>
 				<b-col><h5>CONTACT US</h5></b-col>
 			</b-row>
-			<b-row class='text-center'>
+			<b-row class='text-center mt-3'>
 				<b-col>
 					<a href="https://www.facebook.com/Balkan-Ultra-115856526472988">
 					<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="lightgoldenrodyellow" class="bi bi-facebook" viewBox="0 0 16 16">
@@ -29,7 +29,7 @@
 				<b-col>balkan@balkanultra.com</b-col>
 				<b-col>+359 885 344 910 | +359 885 055 416</b-col>
 			</b-row>
-			<b-row class='text-center'>
+			<b-row class='text-center mt-3'>
 				<b-col>
 					<p><strong>Организатори:</strong> Росен Русев, Иван Гочев</p>
 				</b-col>

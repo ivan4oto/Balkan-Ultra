@@ -1,6 +1,17 @@
 <template>
   <div>
-    <b-img src="../assets/pictures/80banner.jpg" fluid alt="Responsive image"></b-img>
+    <b-card
+      overlay
+      img-src="../assets/pictures/80banner.jpg"
+      img-alt="Card Image"
+      text-variant="white"
+      class='text-right'
+      title=""
+      sub-title=""
+    >
+      <h1 id='card-txt'>80км УЛТРА</h1>
+      <h2 id='card-txt-small'>6100м положителна денивелация</h2>
+    </b-card>
     <b-form @submit="onSubmit" @reset="onReset" v-if="show" class="p-4 reg-form">
       <b-row>
         <b-col>
@@ -112,7 +123,6 @@ export default {
     },
     onSubmit(evt) {
       evt.preventDefault();
-      alert(JSON.stringify(this.form));
       this.submitForm();
     },
     onReset(evt) {
@@ -159,7 +169,18 @@ export default {
   border: 3px solid rgb(150, 17, 0);
 }
 
-h2 {
-  color: brown;
+#card-txt-small {
+  color: rgb(235, 119, 84);
+  font-family: 'SPArielBG';
+  margin-right: 5%;
+  font-size: 2vw;
+}
+#card-txt{
+  font-family: 'SPArielBG';
+  font-weight: bold;
+  font-style: italic;
+  color: rgb(241, 60, 28);
+  font-size: 7vw;
+  margin-right: 5%;
 }
 </style>
