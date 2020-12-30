@@ -3,7 +3,7 @@
     <b-navbar toggleable="lg" type="dark" variant="dark">
       <b-container>
         <router-link to="/">
-          <b-button variant="dark" size="lg">Home</b-button>
+          <b-button variant="dark" size="lg">Начало</b-button>
         </router-link>
 
         <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>

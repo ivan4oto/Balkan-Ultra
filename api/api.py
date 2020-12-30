@@ -11,7 +11,7 @@ mail = Mail(api)
 # get all athletes
 @api.route('/athlete', methods=['GET'])
 def get_athletes():
-    all_athletes = Athlete.query.filter_by(approved=True)
+    all_athletes = Athlete.query.filter_by(approved=True).all()
     result = athletes_schema.dump(all_athletes)
     if len(result) <= 0:
         return jsonify('No data found!')

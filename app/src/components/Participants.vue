@@ -9,8 +9,8 @@
       title=""
       sub-title=""
     >
-    <b-card-text>
-      <h2 id='card-txt'>Регистрирани участници</h2>
+    <b-card-text id='card-txt'>
+     РЕГИСТРИРАНИ УЧАСТНИЦИ
     </b-card-text>
     </b-card>
         <b-table
@@ -88,9 +88,23 @@ export default {
 }
 #card-txt{
   font-family: 'SPArielBG';
-  font-weight: bold;
+  font-weight: normal;
   color: rgb(199, 224, 87);
-  font-size: calc(15px + 2vw);
-  margin-top: 5%;
 }
+@media screen and (min-width: 320px) {
+  #card-txt {
+    font-size: 5vw;
+  }
+}
+@media screen and (min-width: 768px) {
+  #card-txt {
+    font-size: 5vw;
+  }
+}
+@media screen and (min-width: 1000px) {
+  #card-txt {
+    font-size: 3vw;
+  }
+}
+
 </style>

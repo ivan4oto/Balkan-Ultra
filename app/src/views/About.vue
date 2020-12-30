@@ -3,19 +3,19 @@
     <b-container class='gpxbox'>
       <b-row class='text-center'><b-col><h2>Свали GPX track от тук</h2></b-col></b-row>
       <b-row class='text-center' align-h='center'>
-        <b-col><b-button href="Balkan_Ultra.gpx" download variant="danger">Свали GPX 80k ULTRA</b-button></b-col>
-        <b-col><b-button href="Balkan_Sky.gpx" variant="info">Свали GPX 13k SKY</b-button></b-col>
+        <b-col><b-button href="Balkan_Ultra.gpx" download variant="danger">Свали GPX 78км ULTRA</b-button></b-col>
+        <b-col><b-button href="Balkan_Sky.gpx" variant="info">Свали GPX 13км SKY</b-button></b-col>
       </b-row>  
     </b-container>
     <b-container class='mt-3 p-3 text-center information reqs'>
       <b-row class="text-center">
-        <b-col><h3>Условия за участие <strong>80k ULTRA</strong></h3></b-col>        
+        <b-col><h3>Условия за участие <strong>78 ULTRA</strong></h3></b-col>        
       </b-row>
-      <b-row>
-        <h6>1. Всеки от участниците трябва да има предоставена валидна планинска застраховка преди старта на състезанието.<br>
-            2. Завършени две състезания с минимум 4000 метра D+ всяко за последните 3 години /период 2017 - 2020 г./. Дължината на състезанията е без значение.<br>
-            3. Разполагате със собствено GPS устройство /часовник, pъчен GPS, мобилен телефон с планинарска карта/ и може да се ориентирате по предоставена GPS следа. Вграден чип в главата от Бил Гейтс не се приема.<br>
-            4. Всякаква помощ извън контролните пунктове е забранена, и ако разберем ще трябва да ви дисквалифицираме.
+      <b-row class='text-left ml-1'>
+        <h6><strong>1.</strong> Всеки от участниците трябва да има предоставена валидна планинска застраховка преди старта на състезанието.<br>
+            <strong>2.</strong> Завършени две състезания с минимум 4000 метра D+ всяко за последните 3 години /период 2018 - 2021 г./. Дължината на състезанията е без значение. Завършен Adventure Skyrun в периода 2018 - 2021 г. също носи право за участие.<br>
+            <strong>3.</strong> Разполагате със собствено GPS устройство /часовник, pъчен GPS, мобилен телефон с планинарска карта/ и може да се ориентирате по предоставена GPS следа. Вграден чип в главата от Бил Гейтс не се приема.<br>
+            <strong>4.</strong> Всякаква помощ извън контролните пунктове е забранена, и ако разберем ще трябва да ви дисквалифицираме.
         </h6>
       </b-row>
     </b-container>
@@ -28,7 +28,7 @@
 
     <b-container class='important'>
       <b-row align-h='center'>
-        <h3 class="mt-3 mb-4 geartitle text-center">Задължителна екипировка (80км):</h3>
+        <h3 class="mt-3 mb-4 geartitle text-center">Задължителна екипировка (78км):</h3>
       </b-row>
       <b-row class='text-center' cols="1" cols-sm="2" cols-md="4" cols-lg="4" align-h='center'>
         <b-col sm><b-img class='gearimg' src="../assets/icons/gear/icons8-raincoat-96.png" fluid alt="Fluid image"></b-img> <p><strong>Водонепромокаемо яке.</strong>Гледайте да не пропуска. Износена мембрана с 20к воден стълб, която пуска вода на петата минута няма да ви свърши работа, ако завали стабилно.</p></b-col>
@@ -52,7 +52,7 @@
       </b-row>
     </b-container>
     <b-container>
-    <b-row class='mt-4'><h3>Карта на трасе 80км:</h3></b-row>
+    <b-row class='mt-4'><h3>Карта на трасе 78км:</h3></b-row>
     <b-row><b-img src='../assets/pictures/map80.jpg' fluid alt="Fluid image"></b-img></b-row>
     <b-row class='mt-4'><h3>Карта на трасе 13км:</h3></b-row>
     <b-row><b-img src='../assets/pictures/map13.jpg' fluid alt="Fluid image"></b-img></b-row>

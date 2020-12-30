@@ -9,7 +9,7 @@
       title=""
       sub-title=""
     >
-      <h1 id='card-txt'>80км УЛТРА</h1>
+      <h1 id='card-txt'>78км УЛТРА</h1>
       <h2 id='card-txt-small'>6100м положителна денивелация</h2>
     </b-card>
     <b-form @submit="onSubmit" @reset="onReset" v-if="show" class="p-4 reg-form">
@@ -45,8 +45,13 @@
               <b-form-select id="input-3" v-model="form.gender" :options="genders" required></b-form-select>
             </b-form-group>
           </b-col>
+
+          <b-col sm>
+            <b-form-group label="Възраст:" description="Няма да се срамуваш!">
+              <b-form-input type="number" min="0"  max="120"  v-model="form.age"></b-form-input>
+            </b-form-group>
+          </b-col>    
         
-         
           <b-col sm>
             <b-form-group label="Допълнителни легла:" description="Допълнителни легла за спане в хижа Плевен">
               <b-form-input type="number" min="0"  max="7" placeholder="Брой допълнителни легла" v-model="form.extraBeds"></b-form-input>
@@ -63,8 +68,8 @@
                 <b-form-input type="url" v-model="raceLink"></b-form-input>
             </b-col>
           <b-col sm>
-            <b-button @click="addLink" variant="outline-primary">Добави линк</b-button>
-            <b-button variant="outline-danger" @click="removeLink">Премахни линк</b-button>
+            <b-button class='m-1' @click="addLink" variant="outline-primary">Добави линк</b-button>
+            <b-button class='m-1' variant="outline-danger" @click="removeLink">Премахни линк</b-button>
           </b-col>
         </b-row>
       </b-form-group>
