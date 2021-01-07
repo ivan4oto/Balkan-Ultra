@@ -51,13 +51,13 @@
 
           <b-col sm>
             <b-form-group label="Възраст:" description="Няма да се срамуваш!">
-              <b-form-input type="number" min="0"  max="7"  v-model="form.age"></b-form-input>
+              <b-form-input type="number" min="0"  max="120"  v-model="form.age"></b-form-input>
             </b-form-group>
           </b-col>          
          
           <b-col sm>
             <b-form-group label="Допълнителни легла:" description="Допълнителни легла за спане в хижа Плевен">
-              <b-form-input type="number" min="0"  max="120" placeholder="Брой допълнителни легла" v-model="form.extraBeds"></b-form-input>
+              <b-form-input type="number" min="0"  max="7" placeholder="Брой допълнителни легла" v-model="form.extraBeds"></b-form-input>
             </b-form-group>
           </b-col>
         
@@ -136,10 +136,15 @@ export default {
         .then(
           (response)=> {
             console.log(response)
-            this.$router.push("Success")
+            if(response['data'] == "Success. Everything is fine!"){
+              this.$router.push("Success")
+            } else {
+              alert("Възникна проблем. Моля, свържете се с нас.")
+            }
         })
         .catch(function(error) {
           console.log(error);
+          alert('Възникна проблем при изпращането на вашата регистрация. Моля опитайте отново, или се свържете с нас нашата фейсбук страница.')
         });
     }
   },

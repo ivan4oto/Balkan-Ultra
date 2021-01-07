@@ -106,7 +106,7 @@ export default {
         secondname: "",
         lastname: "",
         gender: null,
-        age: 20,
+        age: 0,
         extraBeds: 0,
         raceLinks: [],
       },
@@ -158,11 +158,18 @@ export default {
           link: this.form.raceLinks,
           distance: this.form.distance
         })
-        .then(function(response) {
-          console.log(response.status);
+       .then(
+          (response)=> {
+            console.log(response)
+            if(response['data'] == "Success. Everything is fine!"){
+              this.$router.push("Success")
+            } else {
+              alert("Възникна проблем. Моля, свържете се с нас.")
+            }
         })
         .catch(function(error) {
           console.log(error);
+          alert('Възникна проблем при изпращането на вашата регистрация. Моля, опитайте отново, или се свържете с нас нашата фейсбук страница.')
         });
     },
   },

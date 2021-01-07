@@ -1,4 +1,4 @@
 {
-    "athlete": "api/athlete",
+    "athlete": "http://localhost:8080/athlete",
     "racelink": "api/racelink"
 }
