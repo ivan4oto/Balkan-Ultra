@@ -26,7 +26,7 @@
 			</b-row>
 			<b-row class='text-center'>
 				<b-col><h6>Facebook</h6></b-col>
-				<b-col>balkan@balkanultra.com</b-col>
+				<b-col>balkanultra@abv.bg</b-col>
 				<b-col>+359 885 344 910 | +359 885 055 416</b-col>
 			</b-row>
 			<b-row class='text-center mt-3'>

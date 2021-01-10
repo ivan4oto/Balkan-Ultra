@@ -16,7 +16,7 @@
         <b-carousel-slide img-src="../assets/pictures/c1.jpg"></b-carousel-slide>
         <!-- Slides with custom text -->
         <b-carousel-slide img-src="../assets/pictures/crsl1.jpg">
-          <h1 class='arialsp'>78 км с 6100м д+ по склоновете на Стара Планина!</h1>
+          <h1>78 км с 6100м д+ по склоновете на Стара Планина!</h1>
         </b-carousel-slide>
         <!-- Slides with image only -->
         <b-carousel-slide img-src="../assets/pictures/c2.jpg">
@@ -116,15 +116,15 @@ export default {
 </script>
 
 <style scoped>
-
+p, h4, h1, h2, h3{
+  font-family: 'SPArielBG';
+}
 @media (max-width: 767px) {
   h1 {
    font-size: 20px;
-   font-family: 'Roboto', sans-serif;
   }
   h4 {
     font-size: 18px;
-    font-family: 'Roboto', sans-serif;
   }
   h2 {
     font-size: 20px;
@@ -133,11 +133,8 @@ export default {
     font-size: 20px;
   }
 }
-p{
-  font-family: 'SPArielBG';
-}
+
 h4 {
-  font-family: 'SPArielBG';
   font-weight: bold;
 }
 #txt-1{
@@ -173,15 +170,10 @@ h4 {
   color: rgb(189, 27, 6);
 }
 #txt-wildcard-small{
-  font-family: 'SPArielBG';
   font-style: italic;
   color: rgb(10, 10, 10);
 }
-.arialsp{
-  font-family: 'SPArielBG';
-}
 .redheader {
-  font-family: 'SPArielBG';
   font-weight: bold;
   color: rgb(189, 27, 6);
 }

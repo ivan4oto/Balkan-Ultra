@@ -1,27 +1,17 @@
 <template>
   <div class="m-3">
-    <b-card
-      overlay
-      img-src="../assets/pictures/participants-banner.jpg"
-      img-alt="Card Image"
-      text-variant="white"
-      class='text-center'
-      title=""
-      sub-title=""
-    >
-    <b-card-text id='card-txt'>
-     РЕГИСТРИРАНИ УЧАСТНИЦИ
-    </b-card-text>
-    </b-card>
-        <b-table
-          striped
-          table-variant: dark
-          responsive
-          small
-          hover
-          :items="athletes"
-          :fields="fields"
-        ></b-table>
+    <div id="img-test">
+      <h2>РЕГИСТРИРАНИ УЧАСТНИЦИ</h2>
+    </div>
+    <b-table
+      striped
+      table-variant: dark
+      responsive
+      small
+      hover
+      :items="athletes"
+      :fields="fields"
+    ></b-table>
   </div>
 </template>
 <script>
@@ -86,25 +76,14 @@ export default {
 .frame {
   border: 5px solid rgb(34, 60, 87);
 }
-#card-txt{
-  font-family: 'SPArielBG';
-  font-weight: normal;
-  color: rgb(199, 224, 87);
-}
-@media screen and (min-width: 320px) {
-  #card-txt {
-    font-size: 5vw;
-  }
-}
-@media screen and (min-width: 768px) {
-  #card-txt {
-    font-size: 5vw;
-  }
-}
-@media screen and (min-width: 1000px) {
-  #card-txt {
-    font-size: 3vw;
-  }
+
+#img-test {
+    background-image:url("../assets/pictures/participants-banner.jpg");
+    background-position:center;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    color: rgb(235, 231, 12);
+    text-align: center;
 }
 
 </style>

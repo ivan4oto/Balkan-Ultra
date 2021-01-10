@@ -14,6 +14,7 @@
       <b-row class='text-left ml-1'>
         <h6><strong>1.</strong> Всеки от участниците трябва да има предоставена валидна планинска застраховка преди старта на състезанието.<br>
             <strong>2.</strong> Завършени две състезания с минимум 4000 метра D+ всяко за последните 3 години /период 2018 - 2021 г./. Дължината на състезанията е без значение. Завършен Adventure Skyrun в периода 2018 - 2020 г. плюс едно състезание с над 4000 метра D+ също носи право за участие.<br>
+            <strong>2.1.</strong> Завършен Балкан Ултра също носи право за участие.<br>            
             <strong>3.</strong> Разполагате със собствено GPS устройство /часовник, pъчен GPS, мобилен телефон с планинарска карта/ и може да се ориентирате по предоставена GPS следа. Вграден чип в главата от Бил Гейтс не се приема.<br>
             <strong>4.</strong> Всякаква помощ извън контролните пунктове е забранена, и ако разберем ще трябва да ви дисквалифицираме.
         </h6>
@@ -21,6 +22,26 @@
     </b-container>
     <b-container class='mt-3'>
       <b-img src='../assets/pictures/profile80.jpg' fluid alt="Fluid image"></b-img>
+      <ul class='text-center lightbox'>
+        <h4 class='mb-3'>Контролни пунктове 78 км</h4>
+        <b-row>
+          <b-col sm class=''>
+            <li><strong class='orangeli'>1.</strong> вр. Млечен Чал 3.4 км</li>
+            <li><strong class='orangeli'>2.</strong>  Кръстците 7.5 км</li>
+            <li><strong class='orangeli'>3.</strong>  х. Добрила 15.2 км</li>
+            <li><strong class='orangeli'>4.</strong>  гр. Карлово 26 км</li>
+            <li><strong class='orangeli'>5.</strong>  х. Равнец 30 км</li>
+          </b-col>
+          <b-col sm>
+            <li><strong class='orangeli'>6.</strong>  х. Васил Левски 36 км</li>
+            <li><strong class='orangeli'>7.</strong>  Петолъчката 39.7 км</li>
+            <li><strong class='orangeli'>8.</strong>  х. Рай 46 км</li>
+            <li><strong class='orangeli'>9.</strong>  х. Тъжа 59.7 км</li>
+            <li><strong class='orangeli'>10.</strong>  вр. Марагидик 62 км</li>
+            <li><strong class='orangeli'>11.</strong>  Нейчов преслап 71 км</li>
+          </b-col>
+        </b-row>
+      </ul>
     </b-container>
     <b-container class='mt-3'>
       <b-img src='../assets/pictures/profile13.jpg' fluid alt="Fluid image"></b-img>
@@ -52,10 +73,22 @@
       </b-row>
     </b-container>
     <b-container>
-    <b-row class='mt-4'><h3>Карта на трасе 78км:</h3></b-row>
-    <b-row><b-img src='../assets/pictures/map80.jpg' fluid alt="Fluid image"></b-img></b-row>
-    <b-row class='mt-4'><h3>Карта на трасе 13км:</h3></b-row>
-    <b-row><b-img src='../assets/pictures/map13.jpg' fluid alt="Fluid image"></b-img></b-row>
+      <div>
+        <b-row>
+          <b-col class='mt-3' sm>
+            <b-img src='../assets/pictures/map80.jpg' fluid alt="Fluid image" v-b-modal.modal-xl-1></b-img>
+            <b-modal id="modal-xl-1" size="xl" title="78км УЛРА" hide-footer="true">
+              <b-img src='../assets/pictures/map80.jpg' fluid alt="Fluid image"></b-img>
+            </b-modal>
+          </b-col>
+          <b-col class='mt-3' sm>
+            <b-img src='../assets/pictures/map13.jpg' fluid alt="Fluid image" v-b-modal.modal-xl-2></b-img>
+            <b-modal id="modal-xl-2" size="xl" title="13 км СКАЙ" hide-footer="true">
+              <b-img src='../assets/pictures/map13.jpg' fluid alt="Fluid image"></b-img>
+            </b-modal>
+          </b-col>
+        </b-row>
+      </div>
     </b-container>
 
   </div>
@@ -87,7 +120,16 @@
   .reqs{
     background-color: rgb(247, 204, 176);
   }
-  h3, h2, h6, p{
+  h4, h3, h2, h6, p, li{
     font-family: 'SPArielBG';
+  }
+  ul {
+  list-style-type: none;
+  border: 1px solid lightskyblue;
+  margin: 0;
+  padding: 0;
+  }
+  .orangeli {
+    color: orangered;
   }
 </style>
