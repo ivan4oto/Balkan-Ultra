@@ -15,6 +15,7 @@ class Athlete(db.Model):
     bonus_beds = db.Column(db.Integer)
     race_link = db.relationship(
         "RaceLink", backref="athletes", lazy="dynamic")
+    approved = db.Column(db.Boolean(), default=False)
 
 
 class RaceLink(db.Model):
@@ -29,7 +30,8 @@ class RaceLink(db.Model):
 class AthleteSchema(ma.Schema):
     class Meta:
         fields = ('id', 'first_name', 'second_name', 'last_name',
-                  'email', 'phone_number' 'distance', 'gender', 'age', 'bonus_beds')
+                  'email', 'phone_number', 'distance', 'gender', 'age',
+                  'bonus_beds', 'approved')
 
 
 athlete_schema = AthleteSchema()

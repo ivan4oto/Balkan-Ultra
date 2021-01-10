@@ -1,14 +1,17 @@
 <template>
   <div class="m-3">
-        <b-table
-          striped
-          table-variant: dark
-          responsive
-          small
-          hover
-          :items="athletes"
-          :fields="fields"
-        ></b-table>
+    <div id="img-test">
+      <h2>РЕГИСТРИРАНИ УЧАСТНИЦИ</h2>
+    </div>
+    <b-table
+      striped
+      table-variant: dark
+      responsive
+      small
+      hover
+      :items="athletes"
+      :fields="fields"
+    ></b-table>
   </div>
 </template>
 <script>
@@ -22,20 +25,24 @@ export default {
       fields: [
         {
           key: "first_name",
+          label: "Име",
           sortable: false
         },
         {
           key: "last_name",
+          label: "Фамилия",
           sortable: false,
         },
         {
           key: "gender",
+          label: "Пол",
           sortable: true,
           // Variant applies to the whole column, including the header and footer
           variant: "",
         },
         {
           key: "distance",
+          label: "Трасе",
           sortable: true,
         },
       ],
@@ -47,7 +54,7 @@ export default {
       axios
         .get(this.api_uri['athlete'])
         .then((response) => {
-          console.log(response.status);
+          console.log(response.data);
           this.athletes = response.data;
         })
         .catch(function(error) {
@@ -69,4 +76,14 @@ export default {
 .frame {
   border: 5px solid rgb(34, 60, 87);
 }
+
+#img-test {
+    background-image:url("../assets/pictures/participants-banner.jpg");
+    background-position:center;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    color: rgb(235, 231, 12);
+    text-align: center;
+}
+
 </style>

@@ -1,6 +1,17 @@
 <template>
   <div>
-    <b-img src="../assets/pictures/80banner.jpg" fluid alt="Responsive image"></b-img>
+    <b-card
+      overlay
+      img-src="../assets/pictures/80banner.jpg"
+      img-alt="Card Image"
+      text-variant="white"
+      class='text-right'
+      title=""
+      sub-title=""
+    >
+      <h1 id='card-txt'>78км УЛТРА</h1>
+      <h2 id='card-txt-small'>6100м положителна денивелация</h2>
+    </b-card>
     <b-form @submit="onSubmit" @reset="onReset" v-if="show" class="p-4 reg-form">
       <b-row>
         <b-col>
@@ -34,8 +45,13 @@
               <b-form-select id="input-3" v-model="form.gender" :options="genders" required></b-form-select>
             </b-form-group>
           </b-col>
+
+          <b-col sm>
+            <b-form-group label="Възраст:" description="Няма да се срамуваш!">
+              <b-form-input type="number" min="0"  max="120"  v-model="form.age"></b-form-input>
+            </b-form-group>
+          </b-col>    
         
-         
           <b-col sm>
             <b-form-group label="Допълнителни легла:" description="Допълнителни легла за спане в хижа Плевен">
               <b-form-input type="number" min="0"  max="7" placeholder="Брой допълнителни легла" v-model="form.extraBeds"></b-form-input>
@@ -52,8 +68,8 @@
                 <b-form-input type="url" v-model="raceLink"></b-form-input>
             </b-col>
           <b-col sm>
-            <b-button @click="addLink" variant="outline-primary">Добави линк</b-button>
-            <b-button variant="outline-danger" @click="removeLink">Премахни линк</b-button>
+            <b-button class='m-1' @click="addLink" variant="outline-primary">Добави линк</b-button>
+            <b-button class='m-1' variant="outline-danger" @click="removeLink">Премахни линк</b-button>
           </b-col>
         </b-row>
       </b-form-group>
@@ -90,7 +106,7 @@ export default {
         secondname: "",
         lastname: "",
         gender: null,
-        age: 20,
+        age: 0,
         extraBeds: 0,
         raceLinks: [],
       },
@@ -112,7 +128,6 @@ export default {
     },
     onSubmit(evt) {
       evt.preventDefault();
-      alert(JSON.stringify(this.form));
       this.submitForm();
     },
     onReset(evt) {
@@ -143,11 +158,18 @@ export default {
           link: this.form.raceLinks,
           distance: this.form.distance
         })
-        .then(function(response) {
-          console.log(response.status);
+       .then(
+          (response)=> {
+            console.log(response)
+            if(response['data'] == "Success. Everything is fine!"){
+              this.$router.push("Success")
+            } else {
+              alert("Възникна проблем. Моля, свържете се с нас.")
+            }
         })
         .catch(function(error) {
           console.log(error);
+          alert('Възникна проблем при изпращането на вашата регистрация. Моля, опитайте отново, или се свържете с нас нашата фейсбук страница.')
         });
     },
   },
@@ -159,7 +181,18 @@ export default {
   border: 3px solid rgb(150, 17, 0);
 }
 
-h2 {
-  color: brown;
+#card-txt-small {
+  color: rgb(235, 119, 84);
+  font-family: 'SPArielBG';
+  margin-right: 5%;
+  font-size: 2vw;
+}
+#card-txt{
+  font-family: 'SPArielBG';
+  font-weight: bold;
+  font-style: italic;
+  color: rgb(241, 60, 28);
+  font-size: 7vw;
+  margin-right: 5%;
 }
 </style>

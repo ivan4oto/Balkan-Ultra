@@ -1,6 +1,20 @@
 <template>
   <div>
-    <b-img src="../assets/pictures/13banner.jpg" fluid alt="Responsive image"></b-img>
+    <b-card
+      overlay
+      img-src="../assets/pictures/13banner.jpg"
+      img-alt="Card Image"
+      text-variant="white"
+      class='text-right'
+      title=""
+      sub-title=""
+    >
+      <div id="card-div">
+
+      <h1 id='card-txt'>13км СКАЙ</h1>
+      <h2 id='card-txt-small'>1700м положителна денивелация</h2>
+      </div>
+    </b-card>
     <b-form @submit="onSubmit" @reset="onReset" v-if="show"  class="p-3 reg-form">
       <b-row>
         <b-col>
@@ -34,7 +48,12 @@
               <b-form-select id="input-3" v-model="form.gender" :options="genders" required></b-form-select>
             </b-form-group>
           </b-col>
-        
+
+          <b-col sm>
+            <b-form-group label="Възраст:" description="Няма да се срамуваш!">
+              <b-form-input type="number" min="0"  max="120"  v-model="form.age"></b-form-input>
+            </b-form-group>
+          </b-col>          
          
           <b-col sm>
             <b-form-group label="Допълнителни легла:" description="Допълнителни легла за спане в хижа Плевен">
@@ -75,7 +94,7 @@ export default {
         secondname: "",
         lastname: "",
         gender: null,
-        age: 20,
+        age: 0,
         extraBeds: 0,
       },
       genders: [{ text: "Select One", value: null }, "Male", "Female"],
@@ -85,7 +104,6 @@ export default {
   methods: {
     onSubmit(evt) {
       evt.preventDefault();
-      alert(JSON.stringify(this.form));
       this.submitForm();
     },
     onReset(evt) {
@@ -118,10 +136,15 @@ export default {
         .then(
           (response)=> {
             console.log(response)
-            this.$router.push("Success")
+            if(response['data'] == "Success. Everything is fine!"){
+              this.$router.push("Success")
+            } else {
+              alert("Възникна проблем. Моля, свържете се с нас.")
+            }
         })
         .catch(function(error) {
           console.log(error);
+          alert('Възникна проблем при изпращането на вашата регистрация. Моля опитайте отново, или се свържете с нас нашата фейсбук страница.')
         });
     }
   },
@@ -131,5 +154,21 @@ export default {
 <style scoped>
 .reg-form {
   border: 3px solid lightseagreen;
+}
+
+#card-txt-small {
+  color: rgb(68, 214, 233);
+  font-family: 'SPArielBG';
+  margin-right: 5%;
+  font-size: 2vw;
+}
+
+#card-txt{
+  font-family: 'SPArielBG';
+  font-weight: bold;
+  font-style: italic;
+  color: rgb(135, 248, 248);
+  font-size: 7vw;
+  margin-right: 5%;
 }
 </style>
