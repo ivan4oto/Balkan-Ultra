@@ -50,14 +50,7 @@
             <b-form-group label="Възраст:" description="Няма да се срамуваш!">
               <b-form-input type="number" min="0"  max="120"  v-model="form.age"></b-form-input>
             </b-form-group>
-          </b-col>    
-        
-          <b-col sm>
-            <b-form-group label="Допълнителни легла:" description="Допълнителни легла за спане в хижа Плевен">
-              <b-form-input type="number" min="0"  max="7" placeholder="Брой допълнителни легла" v-model="form.extraBeds"></b-form-input>
-            </b-form-group>
-          </b-col>
-        
+          </b-col>        
       </b-row>
       <b-form-group
         label="Линк към резултати:"
