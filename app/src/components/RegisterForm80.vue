@@ -146,7 +146,7 @@ export default {
     },
     submitForm() {
       axios
-        .post(this.api_uri['athlete'], {
+        .post(this.api_uri['athlete-create'], {
           first_name: this.form.firstname,
           second_name: this.form.secondname,
           last_name: this.form.lastname,
@@ -161,7 +161,7 @@ export default {
        .then(
           (response)=> {
             console.log(response)
-            if(response['data'] == "Success. Everything is fine!"){
+            if(response['status'] == 200){
               this.$router.push("Success")
             } else {
               alert("Възникна проблем. Моля, свържете се с нас.")

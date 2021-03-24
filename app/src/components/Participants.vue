@@ -52,7 +52,7 @@ export default {
   methods: {
     getAthletes() {
       axios
-        .get(this.api_uri['athlete'])
+        .get(this.api_uri['athlete-list'])
         .then((response) => {
           console.log(response.data);
           this.athletes = response.data;

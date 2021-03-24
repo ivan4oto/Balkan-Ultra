@@ -50,3 +50,10 @@ htmlcov/
 
 # venv
 venv
+
+# database
+db.*
+*.sqlite3
+
+# migrations
+migrations/
