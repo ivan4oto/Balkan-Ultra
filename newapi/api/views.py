@@ -1,5 +1,7 @@
 from .models import Athletes, Racelinks
 from .serializers import AthletesSerializer
+from .my_mail import my_mail_send
+from .messages import success_msg
 
 from rest_framework.decorators import api_view, permission_classes
 from rest_framework.response import Response
@@ -17,12 +19,14 @@ def apiOverview(request):
     }
     return Response(api_urls)
 
+
 @api_view(['GET'])
 @permission_classes((permissions.AllowAny,))
 def athleteList(request):
     athletes = Athletes.objects.filter(approved=True)
     serializer = AthletesSerializer(athletes, many=True, fields=('first_name', 'last_name', 'gender', 'distance'))
     return Response(serializer.data)
+
 
 @api_view(['POST'])
 @permission_classes((permissions.AllowAny,))
@@ -37,6 +41,6 @@ def athleteCreate(request):
     athlete_fullname = a.first_name + ' ' + a.last_name
     racelink = Racelinks(athlete=a, link=link, athlete_name=athlete_fullname)
     racelink.save()
-    print(a.email)
-    a.send_mail(racelink.link)
+    my_mail_send(a.email, 'BalkanUltra. Your registration is successful.',
+                 success_msg.format(athlete_fullname, a.email, a.distance))
     return Response(request.data)

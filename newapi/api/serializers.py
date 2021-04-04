@@ -1,5 +1,6 @@
-from .models import Athletes, Racelinks
+from .models import Athletes
 from rest_framework import serializers
+
 
 class DynamicFieldsModelSerializer(serializers.ModelSerializer):
     def __init__(self, *args, **kwargs):

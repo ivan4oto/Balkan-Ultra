@@ -26,19 +26,27 @@ SECRET_KEY = 'khg_p9=qf=kldx)$29*f$b_1_4taen7^(y^-8w+h(_%+q8ji7b'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-# EMAIL_HOST='smtp.gmail.com'
-# EMAIL_PORT=465
-# EMAIL_USE_SSL=True
-# EMAIL_HOST_USER='balkanultra.noreply@gmail.com'
-# EMAIL_HOST_PASSWORD=os.environ.get('EMAIL_PASSWORD')
+# EMAIL_HOST = 'mail.balkanultra.com'
+# EMAIL_PORT = 465
+# EMAIL_USE_TLS = True
+# EMAIL_HOST_USER = 'balkan@balkanultra.com'
+# EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_PASSWORD')
 # EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 
-EMAIL_HOST='hertz.superhosting.bg'
-EMAIL_PORT=25
-EMAIL_USE_SSL=False
-EMAIL_HOST_USER='balkan@balkanultra.com'
-EMAIL_HOST_PASSWORD=os.environ.get('EMAIL_PASSWORD')
+
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+EMAIL_HOST_USER = 'balkanultra.noreply@gmail.com'
+EMAIL_HOST_PASSWORD = os.environ.get('MAIL_PASSWORD')
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+
+# EMAIL_HOST='hertz.superhosting.bg'
+# EMAIL_PORT=25
+# EMAIL_USE_SSL=False
+# EMAIL_HOST_USER='balkan@balkanultra.com'
+# EMAIL_HOST_PASSWORD=os.environ.get('EMAIL_PASSWORD')
+# EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 
 # Application definition
 
@@ -153,7 +161,7 @@ CORS_ALLOWED_ORIGINS = [
 ]
 
 
-if DEBUG == True:
+if DEBUG:
     ALLOWED_HOSTS = ['*']
 else:
     ALLOWED_HOSTS = ['balkanultra.com']
