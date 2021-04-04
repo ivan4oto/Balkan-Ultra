@@ -50,14 +50,7 @@
             <b-form-group label="Възраст:" description="Няма да се срамуваш!">
               <b-form-input type="number" min="0"  max="120"  v-model="form.age"></b-form-input>
             </b-form-group>
-          </b-col>    
-        
-          <b-col sm>
-            <b-form-group label="Допълнителни легла:" description="Допълнителни легла за спане в хижа Плевен">
-              <b-form-input type="number" min="0"  max="7" placeholder="Брой допълнителни легла" v-model="form.extraBeds"></b-form-input>
-            </b-form-group>
-          </b-col>
-        
+          </b-col>        
       </b-row>
       <b-form-group
         label="Линк към резултати:"
@@ -91,6 +84,7 @@
 
 <script>
 const axios = require("axios").default;
+
 
 export default {
   name: "RegisterForm",
@@ -145,6 +139,8 @@ export default {
       });
     },
     submitForm() {
+      axios.defaults.xsrfCookieName = 'csrftoken';
+      axios.defaults.xsrfHeaderName = "X-CSRFTOKEN";
       axios
         .post(this.api_uri['athlete-create'], {
           first_name: this.form.firstname,
@@ -157,6 +153,12 @@ export default {
           bonus_beds: this.form.extraBeds,
           link: this.form.raceLinks,
           distance: this.form.distance
+        },
+        {
+          headers: {
+            'Content-Type': 'application/json',
+
+          }
         })
        .then(
           (response)=> {

@@ -15,11 +15,15 @@
       >
         <b-carousel-slide img-src="../assets/pictures/c1.jpg"></b-carousel-slide>
         <!-- Slides with custom text -->
-        <b-carousel-slide img-src="../assets/pictures/crsl1.jpg">
-          <h1>78 км с 6100м д+ по склоновете на Стара Планина!</h1>
+        <b-carousel-slide img-src="../assets/pictures/c5.jpg">
+          <h1></h1>
         </b-carousel-slide>
         <!-- Slides with image only -->
         <b-carousel-slide img-src="../assets/pictures/c2.jpg">
+        </b-carousel-slide>
+                <b-carousel-slide img-src="../assets/pictures/crsl1.jpg">
+          <h1>78 км с 6100м д+</h1>
+          <h1>и 13 км с 1700м д+ по склоновете на Стара Планина!</h1>
         </b-carousel-slide>
       </b-carousel>
       <b-container>

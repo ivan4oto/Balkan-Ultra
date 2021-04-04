@@ -8,7 +8,6 @@ import { BootstrapVueIcons} from 'bootstrap-vue';
 
 Vue.use(BootstrapVueIcons, {})
 
-
 Vue.config.productionTip = false;
 
 Vue.mixin({
