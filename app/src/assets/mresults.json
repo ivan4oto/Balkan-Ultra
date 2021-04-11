@@ -9,15 +9,6 @@
         "Bib number": 6
     },
     {
-        "Ranking": 3,
-        "Time": "13:53:47",
-        "Family name": "Маринов",
-        "First name": "Димитър",
-        "Gender": "M",
-        "Nationality": "BUL",
-        "Bib number": 7
-    },
-    {
         "Ranking": 2,
         "Time": "13:53:47",
         "Family name": "Минков",
@@ -25,6 +16,15 @@
         "Gender": "M",
         "Nationality": "BUL",
         "Bib number": 34
+    },
+    {
+        "Ranking": 3,
+        "Time": "13:53:47",
+        "Family name": "Маринов",
+        "First name": "Димитър",
+        "Gender": "M",
+        "Nationality": "BUL",
+        "Bib number": 7
     },
     {
         "Ranking": 4,
