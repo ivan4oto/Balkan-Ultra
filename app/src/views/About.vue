@@ -72,6 +72,26 @@
         <b-col sm><b-img class='gearimg' src="../assets/icons/icons8-car-roof-box-100.png" fluid alt="Fluid image"></b-img><h4>Транспорт</h4><p>До хижа Плевен се стига след кратък 30 минутен преход от паркинга на ВЕЦ Видима. Ако не разполагате със собствен транспорт може да се комбинирате с някой от другите участници. Всъщност ултрамаратонците не са толкова лоши хора и никой няма да ви открадне чорапите, докато спите в колата.</p></b-col>
       </b-row>
     </b-container>
+    <b-container class='mt-3 p-3 text-center information tech'>
+      <b-row class="text-center">
+        <b-col><h3>Техническа информация</h3></b-col>        
+      </b-row>
+      <b-row class='text-center ml-1'>
+        <h6>
+          <b-row class='m-2'>
+          <p>
+          <strong>78 УЛТРА:</strong>  Дължина: 78км. Изкачване: 6100м. Контролно време: 20ч. Най-висока точка: 2376м. Най-ниска точка: 460м.<br>
+          </p>
+          </b-row>
+          <b-row class='m-2'>
+            <p>
+              <strong>13 СКАЙ:</strong>  Дължина: 14км. Изкачване: 1700м. Няма контролно време. Най-висока точка: 2376м. Най-ниска точка: 1055м. <br>
+            </p>
+          </b-row>
+          
+        </h6>
+      </b-row>
+    </b-container>
     <b-container>
       <div>
         <b-row>
@@ -119,6 +139,9 @@
   }
   .reqs{
     background-color: rgb(247, 204, 176);
+  }
+  .tech{
+    background-color: rgb(174, 209, 243);
   }
   h4, h3, h2, h6, p, li{
     font-family: 'SPArielBG';

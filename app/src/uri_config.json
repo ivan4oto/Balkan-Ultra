@@ -1,5 +1,7 @@
 {
+    "athlete-create-prod": "newapi/api/athlete-create/",
+    "athlete-list-prod": "newapi/api/athlete-list/",
+    "prod-athlete-create": "api/racelink",
     "athlete-create": "http://127.0.0.1:8000/api/athlete-create/",
-    "athlete-list": "http://127.0.0.1:8000/api/athlete-list/",
-    "prod-athlete-create": "api/racelink"
+    "athlete-list": "http://127.0.0.1:8000/api/athlete-list/"
 }

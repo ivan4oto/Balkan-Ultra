@@ -1,10 +1,11 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
 import Home from "../views/Home.vue";
-import Register from "../views/Register.vue";
+// import Register from "../views/Register.vue";
 import Results from "../views/Results.vue";
 import Athletes from "../views/Athletes.vue";
 import Success from "../views/Success.vue";
+import DisabledRegister from "../views/DisabledRegister.vue";
 
 Vue.use(VueRouter);
 
@@ -22,7 +23,7 @@ const routes = [
   {
     path: "/register",
     name: "Register",
-    component: Register,
+    component: DisabledRegister,
   },
   {
     path: "/results",
